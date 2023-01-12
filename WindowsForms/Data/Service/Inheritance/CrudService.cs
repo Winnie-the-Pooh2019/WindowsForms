@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.Remoting;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
@@ -63,10 +64,10 @@ public class CrudService<T> {
     public async Task<T> getById(int id) {
         var client = new HttpClient();
         client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
-        var query = HttpUtility.ParseQueryString($"{baseUrl}/{url}");
+        var query = HttpUtility.ParseQueryString(string.Empty);
         query["id"] = id.ToString();
 
-        var response = await client.GetAsync(query.ToString());
+        var response = await client.DeleteAsync($"{baseUrl}{url}/byId?{query}");
         
         if (!response.IsSuccessStatusCode)
             throw response.StatusCode switch {
@@ -81,6 +82,47 @@ public class CrudService<T> {
         var data = await response.Content.ReadAsStringAsync();
         return JsonConvert.DeserializeObject<T>(data);
     }
-    
-    // public async 
+
+    public async Task<bool> deleteById(int id) {
+        var client = new HttpClient();
+        client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+        var query = HttpUtility.ParseQueryString(string.Empty);
+        query["id"] = id.ToString();
+
+        var response = await client.DeleteAsync($"{baseUrl}{url}/delete/byId?{query}");
+        
+        if (!response.IsSuccessStatusCode)
+            throw response.StatusCode switch {
+                HttpStatusCode.Unauthorized => new TokenExpiredException("Token for such user is expired"),
+                HttpStatusCode.InternalServerError => new ServerErrorException("Internal server error"),
+                HttpStatusCode.Forbidden => new UnauthorizedException(
+                    "You are not authorized or dont have rights to commit request"),
+                _ => new Exception("unexpected exception")
+            };
+        
+        return true;
+    }
+
+    public async Task<bool> update(T obj) {
+        var client = new HttpClient();
+        client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+        var builder = new UriBuilder(baseUrl + $"{url}/update");
+        var query = HttpUtility.ParseQueryString(string.Empty);
+        builder.Query = query.ToString();
+        
+        var content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
+
+        var response = await client.PutAsync(builder.ToString(), content);
+        
+        if (!response.IsSuccessStatusCode)
+            throw response.StatusCode switch {
+                HttpStatusCode.Unauthorized => new TokenExpiredException("Token for such user is expired"),
+                HttpStatusCode.InternalServerError => new ServerErrorException("Internal server error"),
+                HttpStatusCode.Forbidden => new UnauthorizedException(
+                    "You are not authorized or dont have rights to commit request"),
+                _ => new Exception("unexpected exception")
+            };
+        
+        return true;
+    }
 }

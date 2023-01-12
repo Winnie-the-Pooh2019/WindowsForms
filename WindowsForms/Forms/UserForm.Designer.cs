@@ -339,6 +339,7 @@ partial class UserForm {
         this.booksGrid.Name = "booksGrid";
         this.booksGrid.Size = new System.Drawing.Size(787, 277);
         this.booksGrid.TabIndex = 0;
+        this.booksGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.booksGrid_CellContentClick);
         // 
         // id
         // 
@@ -391,6 +392,7 @@ partial class UserForm {
         this.categoriesGrid.Name = "categoriesGrid";
         this.categoriesGrid.Size = new System.Drawing.Size(787, 280);
         this.categoriesGrid.TabIndex = 0;
+        this.categoriesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoriesGrid_CellContentClick);
         // 
         // idCategory
         // 
@@ -434,6 +436,7 @@ partial class UserForm {
         this.customersGrid.Name = "customersGrid";
         this.customersGrid.Size = new System.Drawing.Size(787, 276);
         this.customersGrid.TabIndex = 0;
+        this.customersGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customersGrid_CellContentClick);
         // 
         // idCustomer
         // 
@@ -480,6 +483,7 @@ partial class UserForm {
         this.deliveriesGrid.Name = "deliveriesGrid";
         this.deliveriesGrid.Size = new System.Drawing.Size(786, 276);
         this.deliveriesGrid.TabIndex = 0;
+        this.deliveriesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deliveriesGrid_CellContentClick);
         // 
         // idDelivery
         // 
@@ -536,6 +540,7 @@ partial class UserForm {
         this.pricesGrid.Name = "pricesGrid";
         this.pricesGrid.Size = new System.Drawing.Size(784, 274);
         this.pricesGrid.TabIndex = 0;
+        this.pricesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pricesGrid_CellContentClick);
         // 
         // idPrice
         // 
@@ -582,6 +587,7 @@ partial class UserForm {
         this.publishersGrid.Name = "publishersGrid";
         this.publishersGrid.Size = new System.Drawing.Size(785, 276);
         this.publishersGrid.TabIndex = 0;
+        this.publishersGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.publishersGrid_CellContentClick);
         // 
         // idPublisher
         // 
@@ -623,6 +629,7 @@ partial class UserForm {
         this.purchasesGrid.Name = "purchasesGrid";
         this.purchasesGrid.Size = new System.Drawing.Size(786, 276);
         this.purchasesGrid.TabIndex = 0;
+        this.purchasesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.purchasesGrid_CellContentClick);
         // 
         // idPurchase
         // 
@@ -669,6 +676,7 @@ partial class UserForm {
         this.itemsGrid.Name = "itemsGrid";
         this.itemsGrid.Size = new System.Drawing.Size(787, 277);
         this.itemsGrid.TabIndex = 0;
+        this.itemsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsGrid_CellContentClick);
         // 
         // idItem
         // 
@@ -725,6 +733,7 @@ partial class UserForm {
         this.storeGrid.Name = "storeGrid";
         this.storeGrid.Size = new System.Drawing.Size(787, 276);
         this.storeGrid.TabIndex = 0;
+        this.storeGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.storeGrid_CellContentClick);
         // 
         // bookIdStore
         // 
