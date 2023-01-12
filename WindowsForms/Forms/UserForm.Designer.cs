@@ -29,26 +29,19 @@ partial class UserForm {
     private void InitializeComponent() {
         this.menuStrip1 = new System.Windows.Forms.MenuStrip();
         this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.разлогинитьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        this.exit = new System.Windows.Forms.ToolStripMenuItem();
         this.добавлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.добавлениеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-        this.спортсменToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.клубToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.спортивноеСооружениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.видСпортаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.тренерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.спортсменToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-        this.клубToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-        this.спортивноеСооружениеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-        this.видТренераToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.тненерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.editMeniStripItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.спортсменToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-        this.клубToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-        this.спортивноеСооружениеToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-        this.видСпортаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-        this.тренерToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+        this.bookCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
+        this.categoryCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
+        this.customerCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
+        this.deliveryCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
+        this.priceCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
+        this.publisherCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
+        this.purchaseCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
+        this.itemCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
+        this.storeCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
+        this.userCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
         this.tabs = new System.Windows.Forms.TabControl();
         this.bookTab = new System.Windows.Forms.TabPage();
         this.booksGrid = new System.Windows.Forms.DataGridView();
@@ -152,152 +145,110 @@ partial class UserForm {
         // 
         // menuStrip1
         // 
-        this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+        this.menuStrip1.BackColor = System.Drawing.Color.White;
         this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-        this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.менюToolStripMenuItem, this.добавлениеToolStripMenuItem, this.добавлениеToolStripMenuItem1, this.deleteToolStripMenuItem, this.editMeniStripItem });
+        this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.менюToolStripMenuItem, this.добавлениеToolStripMenuItem, this.добавлениеToolStripMenuItem1 });
         this.menuStrip1.Location = new System.Drawing.Point(0, 0);
         this.menuStrip1.Name = "menuStrip1";
-        this.menuStrip1.Size = new System.Drawing.Size(800, 26);
+        this.menuStrip1.Size = new System.Drawing.Size(800, 24);
         this.menuStrip1.TabIndex = 4;
         this.menuStrip1.Text = "menuStrip1";
         // 
         // менюToolStripMenuItem
         // 
-        this.менюToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-        this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.разлогинитьсяToolStripMenuItem });
-        this.менюToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+        this.менюToolStripMenuItem.BackColor = System.Drawing.Color.White;
+        this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.exit });
+        this.менюToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+        this.менюToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
         this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
-        this.менюToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
-        this.менюToolStripMenuItem.Text = "Меню";
+        this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+        this.менюToolStripMenuItem.Text = "Menu";
         // 
-        // разлогинитьсяToolStripMenuItem
+        // exit
         // 
-        this.разлогинитьсяToolStripMenuItem.BackColor = System.Drawing.Color.White;
-        this.разлогинитьсяToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-        this.разлогинитьсяToolStripMenuItem.Name = "разлогинитьсяToolStripMenuItem";
-        this.разлогинитьсяToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-        this.разлогинитьсяToolStripMenuItem.Text = "Логаут";
+        this.exit.BackColor = System.Drawing.Color.White;
+        this.exit.ForeColor = System.Drawing.Color.Black;
+        this.exit.Name = "exit";
+        this.exit.Size = new System.Drawing.Size(97, 22);
+        this.exit.Text = "Exit";
         // 
         // добавлениеToolStripMenuItem
         // 
         this.добавлениеToolStripMenuItem.Name = "добавлениеToolStripMenuItem";
-        this.добавлениеToolStripMenuItem.Size = new System.Drawing.Size(12, 22);
+        this.добавлениеToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
         // 
         // добавлениеToolStripMenuItem1
         // 
-        this.добавлениеToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.спортсменToolStripMenuItem, this.клубToolStripMenuItem, this.спортивноеСооружениеToolStripMenuItem, this.видСпортаToolStripMenuItem, this.тренерToolStripMenuItem });
-        this.добавлениеToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+        this.добавлениеToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.bookCreateMenu, this.categoryCreateMenu, this.customerCreateMenu, this.deliveryCreateMenu, this.priceCreateMenu, this.publisherCreateMenu, this.purchaseCreateMenu, this.itemCreateMenu, this.storeCreateMenu, this.userCreateMenu });
+        this.добавлениеToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+        this.добавлениеToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
         this.добавлениеToolStripMenuItem1.Name = "добавлениеToolStripMenuItem1";
-        this.добавлениеToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
-        this.добавлениеToolStripMenuItem1.Text = "Добавление";
+        this.добавлениеToolStripMenuItem1.Size = new System.Drawing.Size(45, 20);
+        this.добавлениеToolStripMenuItem1.Text = "Add";
         // 
-        // спортсменToolStripMenuItem
+        // bookCreateMenu
         // 
-        this.спортсменToolStripMenuItem.Name = "спортсменToolStripMenuItem";
-        this.спортсменToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-        this.спортсменToolStripMenuItem.Text = "Спортсмен";
+        this.bookCreateMenu.Name = "bookCreateMenu";
+        this.bookCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.bookCreateMenu.Text = "Book";
+        this.bookCreateMenu.Click += new System.EventHandler(this.bookCreateMenu_Click);
         // 
-        // клубToolStripMenuItem
+        // categoryCreateMenu
         // 
-        this.клубToolStripMenuItem.Name = "клубToolStripMenuItem";
-        this.клубToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-        this.клубToolStripMenuItem.Text = "Клуб";
+        this.categoryCreateMenu.Name = "categoryCreateMenu";
+        this.categoryCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.categoryCreateMenu.Text = "Category";
+        this.categoryCreateMenu.Click += new System.EventHandler(this.categoryCreateMenu_Click);
         // 
-        // спортивноеСооружениеToolStripMenuItem
+        // customerCreateMenu
         // 
-        this.спортивноеСооружениеToolStripMenuItem.Name = "спортивноеСооружениеToolStripMenuItem";
-        this.спортивноеСооружениеToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-        this.спортивноеСооружениеToolStripMenuItem.Text = "Спортивное сооружение";
+        this.customerCreateMenu.Name = "customerCreateMenu";
+        this.customerCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.customerCreateMenu.Text = "Customer";
+        this.customerCreateMenu.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
         // 
-        // видСпортаToolStripMenuItem
+        // deliveryCreateMenu
         // 
-        this.видСпортаToolStripMenuItem.Name = "видСпортаToolStripMenuItem";
-        this.видСпортаToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-        this.видСпортаToolStripMenuItem.Text = "Вид спорта";
+        this.deliveryCreateMenu.Name = "deliveryCreateMenu";
+        this.deliveryCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.deliveryCreateMenu.Text = "Delivery";
         // 
-        // тренерToolStripMenuItem
+        // priceCreateMenu
         // 
-        this.тренерToolStripMenuItem.Name = "тренерToolStripMenuItem";
-        this.тренерToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-        this.тренерToolStripMenuItem.Text = "Тренер";
+        this.priceCreateMenu.Name = "priceCreateMenu";
+        this.priceCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.priceCreateMenu.Text = "Price";
         // 
-        // deleteToolStripMenuItem
+        // publisherCreateMenu
         // 
-        this.deleteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.спортсменToolStripMenuItem1, this.клубToolStripMenuItem1, this.спортивноеСооружениеToolStripMenuItem1, this.видТренераToolStripMenuItem, this.тненерToolStripMenuItem });
-        this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-        this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-        this.deleteToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
-        this.deleteToolStripMenuItem.Text = "Удаление";
-        this.deleteToolStripMenuItem.Visible = false;
+        this.publisherCreateMenu.Name = "publisherCreateMenu";
+        this.publisherCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.publisherCreateMenu.Text = "Publisher";
+        this.publisherCreateMenu.Click += new System.EventHandler(this.publisherCreateMenu_Click);
         // 
-        // спортсменToolStripMenuItem1
+        // purchaseCreateMenu
         // 
-        this.спортсменToolStripMenuItem1.Name = "спортсменToolStripMenuItem1";
-        this.спортсменToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
-        this.спортсменToolStripMenuItem1.Text = "Спортсмен";
+        this.purchaseCreateMenu.Name = "purchaseCreateMenu";
+        this.purchaseCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.purchaseCreateMenu.Text = "Purchase";
         // 
-        // клубToolStripMenuItem1
+        // itemCreateMenu
         // 
-        this.клубToolStripMenuItem1.Name = "клубToolStripMenuItem1";
-        this.клубToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
-        this.клубToolStripMenuItem1.Text = "Клуб";
+        this.itemCreateMenu.Name = "itemCreateMenu";
+        this.itemCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.itemCreateMenu.Text = "Purchase item";
         // 
-        // спортивноеСооружениеToolStripMenuItem1
+        // storeCreateMenu
         // 
-        this.спортивноеСооружениеToolStripMenuItem1.Name = "спортивноеСооружениеToolStripMenuItem1";
-        this.спортивноеСооружениеToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
-        this.спортивноеСооружениеToolStripMenuItem1.Text = "Спортивное сооружение";
+        this.storeCreateMenu.Name = "storeCreateMenu";
+        this.storeCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.storeCreateMenu.Text = "Store";
         // 
-        // видТренераToolStripMenuItem
+        // userCreateMenu
         // 
-        this.видТренераToolStripMenuItem.Name = "видТренераToolStripMenuItem";
-        this.видТренераToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-        this.видТренераToolStripMenuItem.Text = "Вид тренера";
-        // 
-        // тненерToolStripMenuItem
-        // 
-        this.тненерToolStripMenuItem.Name = "тненерToolStripMenuItem";
-        this.тненерToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-        this.тненерToolStripMenuItem.Text = "Тренер";
-        // 
-        // editMeniStripItem
-        // 
-        this.editMeniStripItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.спортсменToolStripMenuItem2, this.клубToolStripMenuItem2, this.спортивноеСооружениеToolStripMenuItem2, this.видСпортаToolStripMenuItem1, this.тренерToolStripMenuItem1 });
-        this.editMeniStripItem.ForeColor = System.Drawing.Color.White;
-        this.editMeniStripItem.Name = "editMeniStripItem";
-        this.editMeniStripItem.Size = new System.Drawing.Size(149, 22);
-        this.editMeniStripItem.Text = "Редактирование";
-        this.editMeniStripItem.Visible = false;
-        // 
-        // спортсменToolStripMenuItem2
-        // 
-        this.спортсменToolStripMenuItem2.Name = "спортсменToolStripMenuItem2";
-        this.спортсменToolStripMenuItem2.Size = new System.Drawing.Size(269, 22);
-        this.спортсменToolStripMenuItem2.Text = "Спортсмен";
-        // 
-        // клубToolStripMenuItem2
-        // 
-        this.клубToolStripMenuItem2.Name = "клубToolStripMenuItem2";
-        this.клубToolStripMenuItem2.Size = new System.Drawing.Size(269, 22);
-        this.клубToolStripMenuItem2.Text = "Клуб";
-        // 
-        // спортивноеСооружениеToolStripMenuItem2
-        // 
-        this.спортивноеСооружениеToolStripMenuItem2.Name = "спортивноеСооружениеToolStripMenuItem2";
-        this.спортивноеСооружениеToolStripMenuItem2.Size = new System.Drawing.Size(269, 22);
-        this.спортивноеСооружениеToolStripMenuItem2.Text = "Спортивное сооружение";
-        // 
-        // видСпортаToolStripMenuItem1
-        // 
-        this.видСпортаToolStripMenuItem1.Name = "видСпортаToolStripMenuItem1";
-        this.видСпортаToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
-        this.видСпортаToolStripMenuItem1.Text = "Вид спорта";
-        // 
-        // тренерToolStripMenuItem1
-        // 
-        this.тренерToolStripMenuItem1.Name = "тренерToolStripMenuItem1";
-        this.тренерToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
-        this.тренерToolStripMenuItem1.Text = "Тренер";
+        this.userCreateMenu.Name = "userCreateMenu";
+        this.userCreateMenu.Size = new System.Drawing.Size(161, 22);
+        this.userCreateMenu.Text = "User";
         // 
         // tabs
         // 
@@ -860,6 +811,12 @@ partial class UserForm {
         this.PerformLayout();
     }
 
+    private System.Windows.Forms.ToolStripMenuItem publisherCreateMenu;
+    private System.Windows.Forms.ToolStripMenuItem purchaseCreateMenu;
+    private System.Windows.Forms.ToolStripMenuItem itemCreateMenu;
+    private System.Windows.Forms.ToolStripMenuItem storeCreateMenu;
+    private System.Windows.Forms.ToolStripMenuItem userCreateMenu;
+
     private System.Windows.Forms.TabControl tabs;
 
     private System.Windows.Forms.DataGridViewTextBoxColumn idUsers;
@@ -959,26 +916,14 @@ partial class UserForm {
 
     private System.Windows.Forms.MenuStrip menuStrip1;
     private System.Windows.Forms.ToolStripMenuItem менюToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem разлогинитьсяToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem exit;
     private System.Windows.Forms.ToolStripMenuItem добавлениеToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem добавлениеToolStripMenuItem1;
-    private System.Windows.Forms.ToolStripMenuItem спортсменToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem клубToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem спортивноеСооружениеToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem видСпортаToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem тренерToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem спортсменToolStripMenuItem1;
-    private System.Windows.Forms.ToolStripMenuItem клубToolStripMenuItem1;
-    private System.Windows.Forms.ToolStripMenuItem спортивноеСооружениеToolStripMenuItem1;
-    private System.Windows.Forms.ToolStripMenuItem видТренераToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem тненерToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem editMeniStripItem;
-    private System.Windows.Forms.ToolStripMenuItem спортсменToolStripMenuItem2;
-    private System.Windows.Forms.ToolStripMenuItem клубToolStripMenuItem2;
-    private System.Windows.Forms.ToolStripMenuItem спортивноеСооружениеToolStripMenuItem2;
-    private System.Windows.Forms.ToolStripMenuItem видСпортаToolStripMenuItem1;
-    private System.Windows.Forms.ToolStripMenuItem тренерToolStripMenuItem1;
+    private System.Windows.Forms.ToolStripMenuItem bookCreateMenu;
+    private System.Windows.Forms.ToolStripMenuItem categoryCreateMenu;
+    private System.Windows.Forms.ToolStripMenuItem customerCreateMenu;
+    private System.Windows.Forms.ToolStripMenuItem deliveryCreateMenu;
+    private System.Windows.Forms.ToolStripMenuItem priceCreateMenu;
 
 #endregion
 }

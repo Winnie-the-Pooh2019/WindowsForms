@@ -95,6 +95,30 @@
     <Compile Include="Forms\AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BookCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookCreate.Designer.cs">
+      <DependentUpon>BookCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CategoryCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CategoryCreate.Designer.cs">
+      <DependentUpon>CategoryCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CutomerCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CutomerCreate.Designer.cs">
+      <DependentUpon>CutomerCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PublisherCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PublisherCreate.Designer.cs">
+      <DependentUpon>PublisherCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +135,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BookCreate.resx">
+      <DependentUpon>BookCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CategoryCreate.resx">
+      <DependentUpon>CategoryCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CutomerCreate.resx">
+      <DependentUpon>CutomerCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PublisherCreate.resx">
+      <DependentUpon>PublisherCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>

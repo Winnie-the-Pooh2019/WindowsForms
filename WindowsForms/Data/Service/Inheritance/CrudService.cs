@@ -110,11 +110,36 @@ public class CrudService<T> {
         var query = HttpUtility.ParseQueryString(string.Empty);
         builder.Query = query.ToString();
 
-        MessageBox.Show(builder.ToString());
+        // MessageBox.Show(builder.ToString());
         
         var content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
 
         var response = await client.PutAsync(builder.ToString(), content);
+        
+        if (!response.IsSuccessStatusCode)
+            throw response.StatusCode switch {
+                HttpStatusCode.Unauthorized => new TokenExpiredException("Token for such user is expired"),
+                HttpStatusCode.InternalServerError => new ServerErrorException("Internal server error"),
+                HttpStatusCode.Forbidden => new UnauthorizedException(
+                    "You are not authorized or dont have rights to commit request"),
+                _ => new Exception("unexpected exception")
+            };
+        
+        return true;
+    }
+
+    public async Task<bool> create(T obj) {
+        var client = new HttpClient();
+        client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+        var builder = new UriBuilder(baseUrl + $"{url}/create");
+        var query = HttpUtility.ParseQueryString(string.Empty);
+        builder.Query = query.ToString();
+
+        // MessageBox.Show(builder.ToString());
+        
+        var content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
+
+        var response = await client.PostAsync(builder.ToString(), content);
         
         if (!response.IsSuccessStatusCode)
             throw response.StatusCode switch {

@@ -1,7 +1,7 @@
 namespace WindowsForms.Data.Models;
 
 public record Book {
-    public int id { get; set; }
+    public int id { get; set; } = 0;
 
     public string name { get; set; }
     

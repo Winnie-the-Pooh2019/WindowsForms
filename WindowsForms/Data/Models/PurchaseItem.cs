@@ -1,7 +1,7 @@
 namespace WindowsForms.Data.Models;
 
 public record PurchaseItem {
-    public int id { get; set; }
+    public int id { get; set; } = 0;
     
     public Purchase? purchase { get; set; }
 

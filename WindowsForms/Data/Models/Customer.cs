@@ -1,7 +1,7 @@
 namespace WindowsForms.Data.Models; 
 
 public record Customer {
-    public int id { get; set; }
+    public int id { get; set; } = 0;
     
     public string firstName { get; set; }
     

@@ -16,3 +16,7 @@ C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Form
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.UserForm.resources
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\bin\Debug\System.Web.Http.Common.dll
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\bin\Debug\System.Web.Http.Common.xml
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.BookCreate.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.CategoryCreate.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.PublisherCreate.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.CutomerCreate.resources

@@ -3,7 +3,7 @@ using System;
 namespace WindowsForms.Data.Models;
 
 public record Purchase {
-    public int id { get; set; }
+    public int id { get; set; } = 0;
     
     public Customer? customer { get; set; }
 

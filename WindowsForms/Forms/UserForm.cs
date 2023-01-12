@@ -499,4 +499,28 @@ public partial class UserForm : Form {
                 await userService.update(user);
         }
     }
+
+    private void bookCreateMenu_Click(object sender, EventArgs e) {
+        var createBook = new BookCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
+
+    private void categoryCreateMenu_Click(object sender, EventArgs e) {
+        var createBook = new CategoryCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
+
+    private void publisherCreateMenu_Click(object sender, EventArgs e) {
+        var createBook = new PublisherCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
+
+    private void customerToolStripMenuItem_Click(object sender, EventArgs e) {
+        var createBook = new CutomerCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
 }
