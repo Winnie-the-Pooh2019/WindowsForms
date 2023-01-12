@@ -78,6 +78,55 @@ partial class UserForm {
         this.lastNameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.deleteCustomer = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editCustomer = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.dataGridView4 = new System.Windows.Forms.DataGridView();
+        this.idDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.bookIdDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.dateDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.booksCountDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.priceDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.deleteDelivery = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.editDelivery = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.dataGridView5 = new System.Windows.Forms.DataGridView();
+        this.idPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.datePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.pricePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.deletePrice = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.eidtPrice = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.dataGridView6 = new System.Windows.Forms.DataGridView();
+        this.idPublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.namePublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.deletePublisher = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.editPublisher = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.dataGridView7 = new System.Windows.Forms.DataGridView();
+        this.idPurchase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.customerSurnamePurchase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.datePurchase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.deletePuchase = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.editPurchase = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.dataGridView8 = new System.Windows.Forms.DataGridView();
+        this.idItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.purchaseIdItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.bookIdItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.booksCountItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.priceIdItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.deleteItem = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.editItem = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.dataGridView9 = new System.Windows.Forms.DataGridView();
+        this.bookIdStore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.booksCountStore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.priceStore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.deleteStore = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.editStore = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.dataGridView10 = new System.Windows.Forms.DataGridView();
+        this.idUsers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.loginUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.passwordUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.firstNameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.lastNameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.roleUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.saltUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.deleteUser = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.editUser = new System.Windows.Forms.DataGridViewButtonColumn();
         this.menuStrip1.SuspendLayout();
         this.tabControl1.SuspendLayout();
         this.bookTab.SuspendLayout();
@@ -85,7 +134,21 @@ partial class UserForm {
         this.categoryTab.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
         this.customerTab.SuspendLayout();
+        this.deliveryTab.SuspendLayout();
+        this.priceTab.SuspendLayout();
+        this.publisherTab.SuspendLayout();
+        this.purchaseTab.SuspendLayout();
+        this.itemTab.SuspendLayout();
+        this.storeTab.SuspendLayout();
+        this.userTab.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
         this.SuspendLayout();
         // 
         // menuStrip1
@@ -311,6 +374,7 @@ partial class UserForm {
         // 
         // deliveryTab
         // 
+        this.deliveryTab.Controls.Add(this.dataGridView4);
         this.deliveryTab.Location = new System.Drawing.Point(4, 22);
         this.deliveryTab.Name = "deliveryTab";
         this.deliveryTab.Size = new System.Drawing.Size(789, 278);
@@ -320,6 +384,7 @@ partial class UserForm {
         // 
         // priceTab
         // 
+        this.priceTab.Controls.Add(this.dataGridView5);
         this.priceTab.Location = new System.Drawing.Point(4, 22);
         this.priceTab.Name = "priceTab";
         this.priceTab.Size = new System.Drawing.Size(789, 278);
@@ -329,6 +394,7 @@ partial class UserForm {
         // 
         // publisherTab
         // 
+        this.publisherTab.Controls.Add(this.dataGridView6);
         this.publisherTab.Location = new System.Drawing.Point(4, 22);
         this.publisherTab.Name = "publisherTab";
         this.publisherTab.Size = new System.Drawing.Size(789, 278);
@@ -338,6 +404,7 @@ partial class UserForm {
         // 
         // purchaseTab
         // 
+        this.purchaseTab.Controls.Add(this.dataGridView7);
         this.purchaseTab.Location = new System.Drawing.Point(4, 22);
         this.purchaseTab.Name = "purchaseTab";
         this.purchaseTab.Size = new System.Drawing.Size(789, 278);
@@ -347,6 +414,7 @@ partial class UserForm {
         // 
         // itemTab
         // 
+        this.itemTab.Controls.Add(this.dataGridView8);
         this.itemTab.Location = new System.Drawing.Point(4, 22);
         this.itemTab.Name = "itemTab";
         this.itemTab.Size = new System.Drawing.Size(789, 278);
@@ -356,6 +424,7 @@ partial class UserForm {
         // 
         // storeTab
         // 
+        this.storeTab.Controls.Add(this.dataGridView9);
         this.storeTab.Location = new System.Drawing.Point(4, 22);
         this.storeTab.Name = "storeTab";
         this.storeTab.Size = new System.Drawing.Size(789, 278);
@@ -365,6 +434,7 @@ partial class UserForm {
         // 
         // userTab
         // 
+        this.userTab.Controls.Add(this.dataGridView10);
         this.userTab.Location = new System.Drawing.Point(4, 22);
         this.userTab.Name = "userTab";
         this.userTab.Size = new System.Drawing.Size(789, 278);
@@ -460,6 +530,294 @@ partial class UserForm {
         this.editCustomer.HeaderText = "Edit";
         this.editCustomer.Name = "editCustomer";
         // 
+        // dataGridView4
+        // 
+        this.dataGridView4.AllowUserToAddRows = false;
+        this.dataGridView4.AllowUserToDeleteRows = false;
+        this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idDelivery, this.bookIdDelivery, this.dateDelivery, this.booksCountDelivery, this.priceDelivery, this.deleteDelivery, this.editDelivery });
+        this.dataGridView4.Location = new System.Drawing.Point(2, 1);
+        this.dataGridView4.Name = "dataGridView4";
+        this.dataGridView4.Size = new System.Drawing.Size(786, 276);
+        this.dataGridView4.TabIndex = 0;
+        // 
+        // idDelivery
+        // 
+        this.idDelivery.HeaderText = "Id";
+        this.idDelivery.Name = "idDelivery";
+        // 
+        // bookIdDelivery
+        // 
+        this.bookIdDelivery.HeaderText = "Book id";
+        this.bookIdDelivery.Name = "bookIdDelivery";
+        // 
+        // dateDelivery
+        // 
+        this.dateDelivery.HeaderText = "Delivery date";
+        this.dateDelivery.Name = "dateDelivery";
+        // 
+        // booksCountDelivery
+        // 
+        this.booksCountDelivery.HeaderText = "Books count";
+        this.booksCountDelivery.Name = "booksCountDelivery";
+        // 
+        // priceDelivery
+        // 
+        this.priceDelivery.HeaderText = "Price";
+        this.priceDelivery.Name = "priceDelivery";
+        // 
+        // deleteDelivery
+        // 
+        this.deleteDelivery.HeaderText = "Delete";
+        this.deleteDelivery.Name = "deleteDelivery";
+        // 
+        // editDelivery
+        // 
+        this.editDelivery.HeaderText = "Edit";
+        this.editDelivery.Name = "editDelivery";
+        // 
+        // dataGridView5
+        // 
+        this.dataGridView5.AllowUserToAddRows = false;
+        this.dataGridView5.AllowUserToDeleteRows = false;
+        this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idPrice, this.datePrice, this.pricePrice, this.deletePrice, this.eidtPrice });
+        this.dataGridView5.Location = new System.Drawing.Point(4, 3);
+        this.dataGridView5.Name = "dataGridView5";
+        this.dataGridView5.Size = new System.Drawing.Size(784, 274);
+        this.dataGridView5.TabIndex = 0;
+        // 
+        // idPrice
+        // 
+        this.idPrice.HeaderText = "Id";
+        this.idPrice.Name = "idPrice";
+        // 
+        // datePrice
+        // 
+        this.datePrice.HeaderText = "Price Changed";
+        this.datePrice.Name = "datePrice";
+        // 
+        // pricePrice
+        // 
+        this.pricePrice.HeaderText = "New Price";
+        this.pricePrice.Name = "pricePrice";
+        // 
+        // deletePrice
+        // 
+        this.deletePrice.HeaderText = "Delete";
+        this.deletePrice.Name = "deletePrice";
+        // 
+        // eidtPrice
+        // 
+        this.eidtPrice.HeaderText = "Edit";
+        this.eidtPrice.Name = "eidtPrice";
+        // 
+        // dataGridView6
+        // 
+        this.dataGridView6.AllowUserToAddRows = false;
+        this.dataGridView6.AllowUserToDeleteRows = false;
+        this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idPublisher, this.namePublisher, this.deletePublisher, this.editPublisher });
+        this.dataGridView6.Location = new System.Drawing.Point(3, 1);
+        this.dataGridView6.Name = "dataGridView6";
+        this.dataGridView6.Size = new System.Drawing.Size(785, 276);
+        this.dataGridView6.TabIndex = 0;
+        // 
+        // idPublisher
+        // 
+        this.idPublisher.HeaderText = "Id";
+        this.idPublisher.Name = "idPublisher";
+        // 
+        // namePublisher
+        // 
+        this.namePublisher.HeaderText = "Name";
+        this.namePublisher.Name = "namePublisher";
+        // 
+        // deletePublisher
+        // 
+        this.deletePublisher.HeaderText = "Delete";
+        this.deletePublisher.Name = "deletePublisher";
+        // 
+        // editPublisher
+        // 
+        this.editPublisher.HeaderText = "Edit";
+        this.editPublisher.Name = "editPublisher";
+        // 
+        // dataGridView7
+        // 
+        this.dataGridView7.AllowUserToAddRows = false;
+        this.dataGridView7.AllowUserToDeleteRows = false;
+        this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idPurchase, this.customerSurnamePurchase, this.datePurchase, this.deletePuchase, this.editPurchase });
+        this.dataGridView7.Location = new System.Drawing.Point(2, 1);
+        this.dataGridView7.Name = "dataGridView7";
+        this.dataGridView7.Size = new System.Drawing.Size(786, 276);
+        this.dataGridView7.TabIndex = 0;
+        // 
+        // idPurchase
+        // 
+        this.idPurchase.HeaderText = "Id";
+        this.idPurchase.Name = "idPurchase";
+        // 
+        // customerSurnamePurchase
+        // 
+        this.customerSurnamePurchase.HeaderText = "Customer surname";
+        this.customerSurnamePurchase.Name = "customerSurnamePurchase";
+        // 
+        // datePurchase
+        // 
+        this.datePurchase.HeaderText = "Date";
+        this.datePurchase.Name = "datePurchase";
+        // 
+        // deletePuchase
+        // 
+        this.deletePuchase.HeaderText = "Delete";
+        this.deletePuchase.Name = "deletePuchase";
+        // 
+        // editPurchase
+        // 
+        this.editPurchase.HeaderText = "Edit";
+        this.editPurchase.Name = "editPurchase";
+        // 
+        // dataGridView8
+        // 
+        this.dataGridView8.AllowUserToAddRows = false;
+        this.dataGridView8.AllowUserToDeleteRows = false;
+        this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idItem, this.purchaseIdItem, this.bookIdItem, this.booksCountItem, this.priceIdItem, this.deleteItem, this.editItem });
+        this.dataGridView8.Location = new System.Drawing.Point(1, 0);
+        this.dataGridView8.Name = "dataGridView8";
+        this.dataGridView8.Size = new System.Drawing.Size(787, 277);
+        this.dataGridView8.TabIndex = 0;
+        // 
+        // idItem
+        // 
+        this.idItem.HeaderText = "Id";
+        this.idItem.Name = "idItem";
+        // 
+        // purchaseIdItem
+        // 
+        this.purchaseIdItem.HeaderText = "Purchase id";
+        this.purchaseIdItem.Name = "purchaseIdItem";
+        // 
+        // bookIdItem
+        // 
+        this.bookIdItem.HeaderText = "Book id";
+        this.bookIdItem.Name = "bookIdItem";
+        // 
+        // booksCountItem
+        // 
+        this.booksCountItem.HeaderText = "Books count";
+        this.booksCountItem.Name = "booksCountItem";
+        // 
+        // priceIdItem
+        // 
+        this.priceIdItem.HeaderText = "Price id";
+        this.priceIdItem.Name = "priceIdItem";
+        // 
+        // deleteItem
+        // 
+        this.deleteItem.HeaderText = "Delete";
+        this.deleteItem.Name = "deleteItem";
+        // 
+        // editItem
+        // 
+        this.editItem.HeaderText = "Edit";
+        this.editItem.Name = "editItem";
+        // 
+        // dataGridView9
+        // 
+        this.dataGridView9.AllowUserToAddRows = false;
+        this.dataGridView9.AllowUserToDeleteRows = false;
+        this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.bookIdStore, this.booksCountStore, this.priceStore, this.deleteStore, this.editStore });
+        this.dataGridView9.Location = new System.Drawing.Point(1, 1);
+        this.dataGridView9.Name = "dataGridView9";
+        this.dataGridView9.Size = new System.Drawing.Size(787, 276);
+        this.dataGridView9.TabIndex = 0;
+        // 
+        // bookIdStore
+        // 
+        this.bookIdStore.HeaderText = "Book id";
+        this.bookIdStore.Name = "bookIdStore";
+        // 
+        // booksCountStore
+        // 
+        this.booksCountStore.HeaderText = "Books count";
+        this.booksCountStore.Name = "booksCountStore";
+        // 
+        // priceStore
+        // 
+        this.priceStore.HeaderText = "Price id";
+        this.priceStore.Name = "priceStore";
+        // 
+        // deleteStore
+        // 
+        this.deleteStore.HeaderText = "Delete";
+        this.deleteStore.Name = "deleteStore";
+        // 
+        // editStore
+        // 
+        this.editStore.HeaderText = "Edit";
+        this.editStore.Name = "editStore";
+        // 
+        // dataGridView10
+        // 
+        this.dataGridView10.AllowUserToAddRows = false;
+        this.dataGridView10.AllowUserToDeleteRows = false;
+        this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idUsers, this.loginUser, this.passwordUser, this.firstNameUser, this.lastNameUser, this.roleUser, this.saltUser, this.deleteUser, this.editUser });
+        this.dataGridView10.Location = new System.Drawing.Point(0, 0);
+        this.dataGridView10.Name = "dataGridView10";
+        this.dataGridView10.Size = new System.Drawing.Size(786, 275);
+        this.dataGridView10.TabIndex = 0;
+        // 
+        // idUsers
+        // 
+        this.idUsers.HeaderText = "Id";
+        this.idUsers.Name = "idUsers";
+        // 
+        // loginUser
+        // 
+        this.loginUser.HeaderText = "Login";
+        this.loginUser.Name = "loginUser";
+        // 
+        // passwordUser
+        // 
+        this.passwordUser.HeaderText = "Password";
+        this.passwordUser.Name = "passwordUser";
+        // 
+        // firstNameUser
+        // 
+        this.firstNameUser.HeaderText = "First name";
+        this.firstNameUser.Name = "firstNameUser";
+        // 
+        // lastNameUser
+        // 
+        this.lastNameUser.HeaderText = "Last name";
+        this.lastNameUser.Name = "lastNameUser";
+        // 
+        // roleUser
+        // 
+        this.roleUser.HeaderText = "Role";
+        this.roleUser.Name = "roleUser";
+        // 
+        // saltUser
+        // 
+        this.saltUser.HeaderText = "Salt";
+        this.saltUser.Name = "saltUser";
+        this.saltUser.ReadOnly = true;
+        // 
+        // deleteUser
+        // 
+        this.deleteUser.HeaderText = "Delete";
+        this.deleteUser.Name = "deleteUser";
+        // 
+        // editUser
+        // 
+        this.editUser.HeaderText = "Edit";
+        this.editUser.Name = "editUser";
+        // 
         // UserForm
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,10 +835,83 @@ partial class UserForm {
         this.categoryTab.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
         this.customerTab.ResumeLayout(false);
+        this.deliveryTab.ResumeLayout(false);
+        this.priceTab.ResumeLayout(false);
+        this.publisherTab.ResumeLayout(false);
+        this.purchaseTab.ResumeLayout(false);
+        this.itemTab.ResumeLayout(false);
+        this.storeTab.ResumeLayout(false);
+        this.userTab.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.DataGridViewTextBoxColumn idUsers;
+    private System.Windows.Forms.DataGridViewTextBoxColumn loginUser;
+    private System.Windows.Forms.DataGridViewTextBoxColumn passwordUser;
+    private System.Windows.Forms.DataGridViewTextBoxColumn firstNameUser;
+    private System.Windows.Forms.DataGridViewTextBoxColumn lastNameUser;
+    private System.Windows.Forms.DataGridViewTextBoxColumn roleUser;
+    private System.Windows.Forms.DataGridViewTextBoxColumn saltUser;
+    private System.Windows.Forms.DataGridViewButtonColumn deleteUser;
+    private System.Windows.Forms.DataGridViewButtonColumn editUser;
+
+    private System.Windows.Forms.DataGridViewTextBoxColumn bookIdStore;
+    private System.Windows.Forms.DataGridViewTextBoxColumn booksCountStore;
+    private System.Windows.Forms.DataGridViewTextBoxColumn priceStore;
+    private System.Windows.Forms.DataGridViewButtonColumn deleteStore;
+    private System.Windows.Forms.DataGridViewButtonColumn editStore;
+    private System.Windows.Forms.DataGridView dataGridView10;
+
+    private System.Windows.Forms.DataGridViewTextBoxColumn idItem;
+    private System.Windows.Forms.DataGridViewTextBoxColumn purchaseIdItem;
+    private System.Windows.Forms.DataGridViewTextBoxColumn bookIdItem;
+    private System.Windows.Forms.DataGridViewTextBoxColumn booksCountItem;
+    private System.Windows.Forms.DataGridViewTextBoxColumn priceIdItem;
+    private System.Windows.Forms.DataGridViewButtonColumn deleteItem;
+    private System.Windows.Forms.DataGridViewButtonColumn editItem;
+    private System.Windows.Forms.DataGridView dataGridView9;
+
+    private System.Windows.Forms.DataGridView dataGridView8;
+
+    private System.Windows.Forms.DataGridViewTextBoxColumn idPurchase;
+    private System.Windows.Forms.DataGridViewTextBoxColumn customerSurnamePurchase;
+    private System.Windows.Forms.DataGridViewTextBoxColumn datePurchase;
+    private System.Windows.Forms.DataGridViewButtonColumn deletePuchase;
+    private System.Windows.Forms.DataGridViewButtonColumn editPurchase;
+
+    private System.Windows.Forms.DataGridViewTextBoxColumn idPublisher;
+    private System.Windows.Forms.DataGridViewTextBoxColumn namePublisher;
+    private System.Windows.Forms.DataGridViewButtonColumn deletePublisher;
+    private System.Windows.Forms.DataGridViewButtonColumn editPublisher;
+    private System.Windows.Forms.DataGridView dataGridView7;
+
+    private System.Windows.Forms.DataGridView dataGridView6;
+
+    private System.Windows.Forms.DataGridViewTextBoxColumn idPrice;
+    private System.Windows.Forms.DataGridViewTextBoxColumn datePrice;
+    private System.Windows.Forms.DataGridViewTextBoxColumn pricePrice;
+    private System.Windows.Forms.DataGridViewButtonColumn deletePrice;
+    private System.Windows.Forms.DataGridViewButtonColumn eidtPrice;
+
+    private System.Windows.Forms.DataGridViewTextBoxColumn idDelivery;
+    private System.Windows.Forms.DataGridViewTextBoxColumn bookIdDelivery;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dateDelivery;
+    private System.Windows.Forms.DataGridViewTextBoxColumn booksCountDelivery;
+    private System.Windows.Forms.DataGridViewTextBoxColumn priceDelivery;
+    private System.Windows.Forms.DataGridViewButtonColumn deleteDelivery;
+    private System.Windows.Forms.DataGridViewButtonColumn editDelivery;
+    private System.Windows.Forms.DataGridView dataGridView5;
+
+    private System.Windows.Forms.DataGridView dataGridView4;
 
     private System.Windows.Forms.DataGridViewTextBoxColumn idCustomer;
     private System.Windows.Forms.DataGridViewTextBoxColumn firstNameCustomer;

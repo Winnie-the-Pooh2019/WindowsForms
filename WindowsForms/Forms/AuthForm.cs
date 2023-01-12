@@ -42,7 +42,9 @@ namespace WindowsForms.Forms {
 
 
                 if (info == null) return;
-                
+
+                var userForm = new UserForm();
+                userForm.Show();
                 if (info.role == "admin")
                 {
                     // ClientForm userForm = new ClientForm(access: info);

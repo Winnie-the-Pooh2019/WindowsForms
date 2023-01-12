@@ -13,4 +13,4 @@ C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.exe
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.pdb
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.RegisterForm.resources
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.AuthForm.resources
-C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.ClientForm.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.UserForm.resources
