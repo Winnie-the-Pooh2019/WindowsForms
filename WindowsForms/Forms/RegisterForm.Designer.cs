@@ -45,9 +45,9 @@ namespace WindowsForms.Forms;
                 this.tbName = new System.Windows.Forms.TextBox();
                 this.panel6 = new System.Windows.Forms.Panel();
                 this.panel7 = new System.Windows.Forms.Panel();
+                this.tbSurname = new System.Windows.Forms.TextBox();
                 this.panel8 = new System.Windows.Forms.Panel();
                 this.label5 = new System.Windows.Forms.Label();
-                this.tbSurname = new System.Windows.Forms.TextBox();
                 this.panel2.SuspendLayout();
                 this.panel1.SuspendLayout();
                 this.panel5.SuspendLayout();
@@ -62,11 +62,11 @@ namespace WindowsForms.Forms;
                 this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                 this.btnLogin.ForeColor = System.Drawing.Color.Black;
-                this.btnLogin.Location = new System.Drawing.Point(105, 602);
+                this.btnLogin.Location = new System.Drawing.Point(105, 590);
                 this.btnLogin.Name = "btnLogin";
                 this.btnLogin.Size = new System.Drawing.Size(215, 41);
                 this.btnLogin.TabIndex = 12;
-                this.btnLogin.Text = "Зарегистрироваться";
+                this.btnLogin.Text = "Sign up";
                 this.btnLogin.UseVisualStyleBackColor = false;
                 this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
                 this.btnLogin.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
@@ -85,23 +85,24 @@ namespace WindowsForms.Forms;
                 // label3
                 // 
                 this.label3.AutoSize = true;
-                this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
                 this.label3.Location = new System.Drawing.Point(55, 19);
                 this.label3.Name = "label3";
-                this.label3.Size = new System.Drawing.Size(83, 18);
+                this.label3.Size = new System.Drawing.Size(68, 16);
                 this.label3.TabIndex = 8;
                 this.label3.Text = "Password";
                 // 
                 // tbPassword
                 // 
-                this.tbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-                this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+                this.tbPassword.BackColor = System.Drawing.Color.White;
+                this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                 this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.tbPassword.ForeColor = System.Drawing.SystemColors.Info;
+                this.tbPassword.ForeColor = System.Drawing.SystemColors.ControlText;
                 this.tbPassword.Location = new System.Drawing.Point(169, 14);
                 this.tbPassword.Name = "tbPassword";
                 this.tbPassword.PasswordChar = '*';
-                this.tbPassword.Size = new System.Drawing.Size(260, 17);
+                this.tbPassword.Size = new System.Drawing.Size(260, 24);
                 this.tbPassword.TabIndex = 7;
                 // 
                 // panel4
@@ -133,33 +134,35 @@ namespace WindowsForms.Forms;
                 // label2
                 // 
                 this.label2.AutoSize = true;
-                this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
                 this.label2.Location = new System.Drawing.Point(55, 24);
                 this.label2.Name = "label2";
-                this.label2.Size = new System.Drawing.Size(85, 18);
+                this.label2.Size = new System.Drawing.Size(71, 16);
                 this.label2.TabIndex = 1;
                 this.label2.Text = "Username";
                 // 
                 // tbUsername
                 // 
-                this.tbUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-                this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.tbUsername.ForeColor = System.Drawing.SystemColors.Info;
+                this.tbUsername.BackColor = System.Drawing.Color.White;
+                this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.tbUsername.ForeColor = System.Drawing.SystemColors.ControlText;
                 this.tbUsername.Location = new System.Drawing.Point(169, 17);
                 this.tbUsername.Name = "tbUsername";
-                this.tbUsername.Size = new System.Drawing.Size(260, 17);
+                this.tbUsername.Size = new System.Drawing.Size(260, 22);
                 this.tbUsername.TabIndex = 3;
                 // 
                 // label1
                 // 
                 this.label1.AutoSize = true;
                 this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.label1.Location = new System.Drawing.Point(184, 41);
+                this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+                this.label1.Location = new System.Drawing.Point(206, 41);
                 this.label1.Name = "label1";
-                this.label1.Size = new System.Drawing.Size(194, 37);
+                this.label1.Size = new System.Drawing.Size(141, 37);
                 this.label1.TabIndex = 9;
-                this.label1.Text = "Регистрация";
+                this.label1.Text = "Check in";
                 // 
                 // button1
                 // 
@@ -169,11 +172,11 @@ namespace WindowsForms.Forms;
                 this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                 this.button1.ForeColor = System.Drawing.Color.Black;
-                this.button1.Location = new System.Drawing.Point(359, 602);
+                this.button1.Location = new System.Drawing.Point(359, 590);
                 this.button1.Name = "button1";
                 this.button1.Size = new System.Drawing.Size(126, 41);
                 this.button1.TabIndex = 13;
-                this.button1.Text = "Авторизация";
+                this.button1.Text = "Sign in";
                 this.button1.UseVisualStyleBackColor = false;
                 this.button1.Click += new System.EventHandler(this.button1_Click);
                 this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
@@ -192,22 +195,23 @@ namespace WindowsForms.Forms;
                 // label4
                 // 
                 this.label4.AutoSize = true;
-                this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
                 this.label4.Location = new System.Drawing.Point(55, 19);
                 this.label4.Name = "label4";
-                this.label4.Size = new System.Drawing.Size(52, 18);
+                this.label4.Size = new System.Drawing.Size(70, 16);
                 this.label4.TabIndex = 8;
-                this.label4.Text = "Name";
+                this.label4.Text = "First name";
                 // 
                 // tbName
                 // 
-                this.tbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-                this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.tbName.ForeColor = System.Drawing.SystemColors.Info;
-                this.tbName.Location = new System.Drawing.Point(169, 14);
+                this.tbName.BackColor = System.Drawing.Color.White;
+                this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.tbName.ForeColor = System.Drawing.SystemColors.ControlText;
+                this.tbName.Location = new System.Drawing.Point(169, 20);
                 this.tbName.Name = "tbName";
-                this.tbName.Size = new System.Drawing.Size(260, 17);
+                this.tbName.Size = new System.Drawing.Size(260, 24);
                 this.tbName.TabIndex = 7;
                 // 
                 // panel6
@@ -228,6 +232,18 @@ namespace WindowsForms.Forms;
                 this.panel7.Size = new System.Drawing.Size(463, 63);
                 this.panel7.TabIndex = 15;
                 // 
+                // tbSurname
+                // 
+                this.tbSurname.BackColor = System.Drawing.Color.White;
+                this.tbSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                this.tbSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.tbSurname.ForeColor = System.Drawing.SystemColors.ControlText;
+                this.tbSurname.Location = new System.Drawing.Point(169, 19);
+                this.tbSurname.Name = "tbSurname";
+                this.tbSurname.Size = new System.Drawing.Size(260, 22);
+                this.tbSurname.TabIndex = 7;
+                this.tbSurname.Text = "\r\n";
+                // 
                 // panel8
                 // 
                 this.panel8.BackColor = System.Drawing.Color.White;
@@ -241,24 +257,12 @@ namespace WindowsForms.Forms;
                 this.label5.AutoSize = true;
                 this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                 this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-                this.label5.Location = new System.Drawing.Point(32, 19);
+                this.label5.Location = new System.Drawing.Point(49, 19);
                 this.label5.Name = "label5";
                 this.label5.Size = new System.Drawing.Size(62, 16);
                 this.label5.TabIndex = 8;
                 this.label5.Text = "Surname";
                 this.label5.Click += new System.EventHandler(this.label5_Click);
-                // 
-                // tbSurname
-                // 
-                this.tbSurname.BackColor = System.Drawing.Color.White;
-                this.tbSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-                this.tbSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.tbSurname.ForeColor = System.Drawing.SystemColors.ControlText;
-                this.tbSurname.Location = new System.Drawing.Point(169, 19);
-                this.tbSurname.Name = "tbSurname";
-                this.tbSurname.Size = new System.Drawing.Size(260, 22);
-                this.tbSurname.TabIndex = 7;
-                this.tbSurname.Text = "\r\n";
                 // 
                 // RegisterForm
                 // 
@@ -276,7 +280,6 @@ namespace WindowsForms.Forms;
                 this.ForeColor = System.Drawing.SystemColors.ButtonFace;
                 this.Name = "RegisterForm";
                 this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-                this.Text = "Регистрация";
                 this.Load += new System.EventHandler(this.RegisterForm_Load);
                 this.panel2.ResumeLayout(false);
                 this.panel2.PerformLayout();
