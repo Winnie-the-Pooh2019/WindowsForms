@@ -142,32 +142,25 @@ namespace WindowsForms.Forms {
                 this.label3.AutoSize = true;
                 this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                 this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-                this.label3.Location = new System.Drawing.Point(271, 327);
+                this.label3.Location = new System.Drawing.Point(276, 327);
                 this.label3.Name = "label3";
                 this.label3.Size = new System.Drawing.Size(43, 13);
                 this.label3.TabIndex = 7;
                 this.label3.Text = "Sign up";
                 this.label3.Click += new System.EventHandler(this.label3_Click);
-                this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
-                this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
                 // 
                 // btnLogin
                 // 
-                this.btnLogin.FlatAppearance.BorderSize = 2;
-                this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
-                this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.btnLogin.ForeColor = System.Drawing.Color.Black;
-                this.btnLogin.Location = new System.Drawing.Point(187, 270);
+                this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+                this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
+                this.btnLogin.Location = new System.Drawing.Point(198, 270);
                 this.btnLogin.Name = "btnLogin";
-                this.btnLogin.Size = new System.Drawing.Size(215, 41);
+                this.btnLogin.Size = new System.Drawing.Size(196, 40);
                 this.btnLogin.TabIndex = 8;
                 this.btnLogin.Text = "Sign in";
-                this.btnLogin.UseVisualStyleBackColor = true;
+                this.btnLogin.UseVisualStyleBackColor = false;
                 this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-                this.btnLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnLogin_KeyPress);
-                this.btnLogin.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-                this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
                 // 
                 // AuthForm
                 // 
@@ -184,7 +177,6 @@ namespace WindowsForms.Forms {
                 this.ForeColor = System.Drawing.SystemColors.ButtonFace;
                 this.Name = "AuthForm";
                 this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-                this.Text = "Авторизация";
                 this.Load += new System.EventHandler(this.AuthForm_Load);
                 this.panel1.ResumeLayout(false);
                 this.panel1.PerformLayout();
@@ -194,10 +186,11 @@ namespace WindowsForms.Forms {
                 this.PerformLayout();
             }
 
+            private System.Windows.Forms.Button btnLogin;
+
         #endregion
 
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label label3;
+            private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbPassword;

@@ -79,8 +79,6 @@ namespace WindowsForms.Forms {
             //при нажатии на Enter нажимается кнопка входа
             this.AcceptButton = btnLogin;
             //при нажатии кнопка анимирует
-            btnLogin.MouseEnter += (s, a) => { btnLogin.ForeColor = Color.Black; };
-            btnLogin.MouseLeave += (s, a) => { btnLogin.ForeColor = Color.DarkTurquoise; };
 
             //пока данные загружаются кнопка блокируется
         }

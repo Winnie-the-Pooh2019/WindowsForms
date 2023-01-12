@@ -62,26 +62,6 @@ public partial class RegisterForm : Form {
         Hide();
     }
 
-    private void btnLogin_MouseEnter(object sender, EventArgs e)
-    {
-        btnLogin.ForeColor = Color.Black;
-    }
-
-    private void btnLogin_MouseLeave(object sender, EventArgs e)
-    {
-        btnLogin.ForeColor = Color.DarkTurquoise;
-    }
-
-    private void button1_MouseEnter(object sender, EventArgs e)
-    {
-        btnLogin.ForeColor = Color.Black;
-    }
-
-    private void button1_MouseLeave(object sender, EventArgs e)
-    {
-        btnLogin.ForeColor = Color.DarkTurquoise;
-    }
-
     private void label5_Click(object sender, EventArgs e) {
     }
 

@@ -29,7 +29,6 @@ namespace WindowsForms.Forms;
             /// the contents of this method with the code editor.
             /// </summary>
             private void InitializeComponent() {
-                this.btnLogin = new System.Windows.Forms.Button();
                 this.panel2 = new System.Windows.Forms.Panel();
                 this.label3 = new System.Windows.Forms.Label();
                 this.tbPassword = new System.Windows.Forms.TextBox();
@@ -39,7 +38,6 @@ namespace WindowsForms.Forms;
                 this.label2 = new System.Windows.Forms.Label();
                 this.tbUsername = new System.Windows.Forms.TextBox();
                 this.label1 = new System.Windows.Forms.Label();
-                this.button1 = new System.Windows.Forms.Button();
                 this.panel5 = new System.Windows.Forms.Panel();
                 this.label4 = new System.Windows.Forms.Label();
                 this.tbName = new System.Windows.Forms.TextBox();
@@ -48,29 +46,13 @@ namespace WindowsForms.Forms;
                 this.tbSurname = new System.Windows.Forms.TextBox();
                 this.panel8 = new System.Windows.Forms.Panel();
                 this.label5 = new System.Windows.Forms.Label();
+                this.btnLogin = new System.Windows.Forms.Button();
+                this.button1 = new System.Windows.Forms.Button();
                 this.panel2.SuspendLayout();
                 this.panel1.SuspendLayout();
                 this.panel5.SuspendLayout();
                 this.panel7.SuspendLayout();
                 this.SuspendLayout();
-                // 
-                // btnLogin
-                // 
-                this.btnLogin.BackColor = System.Drawing.Color.White;
-                this.btnLogin.FlatAppearance.BorderSize = 2;
-                this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
-                this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.btnLogin.ForeColor = System.Drawing.Color.Black;
-                this.btnLogin.Location = new System.Drawing.Point(105, 590);
-                this.btnLogin.Name = "btnLogin";
-                this.btnLogin.Size = new System.Drawing.Size(215, 41);
-                this.btnLogin.TabIndex = 12;
-                this.btnLogin.Text = "Sign up";
-                this.btnLogin.UseVisualStyleBackColor = false;
-                this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-                this.btnLogin.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-                this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
                 // 
                 // panel2
                 // 
@@ -164,24 +146,6 @@ namespace WindowsForms.Forms;
                 this.label1.TabIndex = 9;
                 this.label1.Text = "Check in";
                 // 
-                // button1
-                // 
-                this.button1.BackColor = System.Drawing.Color.White;
-                this.button1.FlatAppearance.BorderSize = 2;
-                this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
-                this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.button1.ForeColor = System.Drawing.Color.Black;
-                this.button1.Location = new System.Drawing.Point(359, 590);
-                this.button1.Name = "button1";
-                this.button1.Size = new System.Drawing.Size(126, 41);
-                this.button1.TabIndex = 13;
-                this.button1.Text = "Sign in";
-                this.button1.UseVisualStyleBackColor = false;
-                this.button1.Click += new System.EventHandler(this.button1_Click);
-                this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-                this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
-                // 
                 // panel5
                 // 
                 this.panel5.Controls.Add(this.label4);
@@ -264,16 +228,42 @@ namespace WindowsForms.Forms;
                 this.label5.Text = "Surname";
                 this.label5.Click += new System.EventHandler(this.label5_Click);
                 // 
+                // btnLogin
+                // 
+                this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+                this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
+                this.btnLogin.Location = new System.Drawing.Point(105, 591);
+                this.btnLogin.Name = "btnLogin";
+                this.btnLogin.Size = new System.Drawing.Size(196, 40);
+                this.btnLogin.TabIndex = 18;
+                this.btnLogin.Text = "Sign in";
+                this.btnLogin.UseVisualStyleBackColor = false;
+                this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+                // 
+                // button1
+                // 
+                this.button1.BackColor = System.Drawing.Color.Transparent;
+                this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+                this.button1.Location = new System.Drawing.Point(373, 591);
+                this.button1.Name = "button1";
+                this.button1.Size = new System.Drawing.Size(112, 40);
+                this.button1.TabIndex = 19;
+                this.button1.Text = "Sign up";
+                this.button1.UseVisualStyleBackColor = false;
+                this.button1.Click += new System.EventHandler(this.button1_Click);
+                // 
                 // RegisterForm
                 // 
                 this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                 this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                 this.BackColor = System.Drawing.Color.White;
                 this.ClientSize = new System.Drawing.Size(576, 680);
-                this.Controls.Add(this.panel7);
-                this.Controls.Add(this.panel5);
                 this.Controls.Add(this.button1);
                 this.Controls.Add(this.btnLogin);
+                this.Controls.Add(this.panel7);
+                this.Controls.Add(this.panel5);
                 this.Controls.Add(this.panel2);
                 this.Controls.Add(this.panel1);
                 this.Controls.Add(this.label1);
