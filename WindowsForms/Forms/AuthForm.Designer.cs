@@ -77,6 +77,7 @@ namespace WindowsForms.Forms {
                 this.tbUsername.Name = "tbUsername";
                 this.tbUsername.Size = new System.Drawing.Size(260, 17);
                 this.tbUsername.TabIndex = 3;
+                this.tbUsername.Text = "Ivashka";
                 // 
                 // panel1
                 // 
@@ -147,6 +148,7 @@ namespace WindowsForms.Forms {
                 this.tbPassword.PasswordChar = '*';
                 this.tbPassword.Size = new System.Drawing.Size(260, 17);
                 this.tbPassword.TabIndex = 7;
+                this.tbPassword.Text = "Ivashka";
                 // 
                 // panel4
                 // 

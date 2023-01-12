@@ -49,36 +49,30 @@ partial class UserForm {
         this.спортивноеСооружениеToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
         this.видСпортаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
         this.тренерToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-        this.tabControl1 = new System.Windows.Forms.TabControl();
+        this.tabs = new System.Windows.Forms.TabControl();
         this.bookTab = new System.Windows.Forms.TabPage();
-        this.dataGridView1 = new System.Windows.Forms.DataGridView();
-        this.categoryTab = new System.Windows.Forms.TabPage();
-        this.dataGridView2 = new System.Windows.Forms.DataGridView();
-        this.customerTab = new System.Windows.Forms.TabPage();
-        this.deliveryTab = new System.Windows.Forms.TabPage();
-        this.priceTab = new System.Windows.Forms.TabPage();
-        this.publisherTab = new System.Windows.Forms.TabPage();
-        this.purchaseTab = new System.Windows.Forms.TabPage();
-        this.itemTab = new System.Windows.Forms.TabPage();
-        this.storeTab = new System.Windows.Forms.TabPage();
-        this.userTab = new System.Windows.Forms.TabPage();
+        this.booksGrid = new System.Windows.Forms.DataGridView();
         this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.publisherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.categoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.deleteBook = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editBook = new System.Windows.Forms.DataGridViewButtonColumn();
+        this.categoryTab = new System.Windows.Forms.TabPage();
+        this.categoriesGrid = new System.Windows.Forms.DataGridView();
         this.idCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.nameCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.delelteCategory = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editCategory = new System.Windows.Forms.DataGridViewButtonColumn();
-        this.dataGridView3 = new System.Windows.Forms.DataGridView();
+        this.customerTab = new System.Windows.Forms.TabPage();
+        this.customersGrid = new System.Windows.Forms.DataGridView();
         this.idCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.firstNameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.lastNameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.deleteCustomer = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editCustomer = new System.Windows.Forms.DataGridViewButtonColumn();
-        this.dataGridView4 = new System.Windows.Forms.DataGridView();
+        this.deliveryTab = new System.Windows.Forms.TabPage();
+        this.deliveriesGrid = new System.Windows.Forms.DataGridView();
         this.idDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.bookIdDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.dateDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,24 +80,28 @@ partial class UserForm {
         this.priceDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.deleteDelivery = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editDelivery = new System.Windows.Forms.DataGridViewButtonColumn();
-        this.dataGridView5 = new System.Windows.Forms.DataGridView();
+        this.priceTab = new System.Windows.Forms.TabPage();
+        this.pricesGrid = new System.Windows.Forms.DataGridView();
         this.idPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.datePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.pricePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.deletePrice = new System.Windows.Forms.DataGridViewButtonColumn();
         this.eidtPrice = new System.Windows.Forms.DataGridViewButtonColumn();
-        this.dataGridView6 = new System.Windows.Forms.DataGridView();
+        this.publisherTab = new System.Windows.Forms.TabPage();
+        this.publishersGrid = new System.Windows.Forms.DataGridView();
         this.idPublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.namePublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.deletePublisher = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editPublisher = new System.Windows.Forms.DataGridViewButtonColumn();
-        this.dataGridView7 = new System.Windows.Forms.DataGridView();
+        this.purchaseTab = new System.Windows.Forms.TabPage();
+        this.purchasesGrid = new System.Windows.Forms.DataGridView();
         this.idPurchase = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.customerSurnamePurchase = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.datePurchase = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.deletePuchase = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editPurchase = new System.Windows.Forms.DataGridViewButtonColumn();
-        this.dataGridView8 = new System.Windows.Forms.DataGridView();
+        this.itemTab = new System.Windows.Forms.TabPage();
+        this.itemsGrid = new System.Windows.Forms.DataGridView();
         this.idItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.purchaseIdItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.bookIdItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,13 +109,15 @@ partial class UserForm {
         this.priceIdItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.deleteItem = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editItem = new System.Windows.Forms.DataGridViewButtonColumn();
-        this.dataGridView9 = new System.Windows.Forms.DataGridView();
+        this.storeTab = new System.Windows.Forms.TabPage();
+        this.storeGrid = new System.Windows.Forms.DataGridView();
         this.bookIdStore = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.booksCountStore = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.priceStore = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.deleteStore = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editStore = new System.Windows.Forms.DataGridViewButtonColumn();
-        this.dataGridView10 = new System.Windows.Forms.DataGridView();
+        this.userTab = new System.Windows.Forms.TabPage();
+        this.usersGrid = new System.Windows.Forms.DataGridView();
         this.idUsers = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.loginUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.passwordUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,27 +128,27 @@ partial class UserForm {
         this.deleteUser = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editUser = new System.Windows.Forms.DataGridViewButtonColumn();
         this.menuStrip1.SuspendLayout();
-        this.tabControl1.SuspendLayout();
+        this.tabs.SuspendLayout();
         this.bookTab.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.booksGrid)).BeginInit();
         this.categoryTab.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.categoriesGrid)).BeginInit();
         this.customerTab.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)(this.customersGrid)).BeginInit();
         this.deliveryTab.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)(this.deliveriesGrid)).BeginInit();
         this.priceTab.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)(this.pricesGrid)).BeginInit();
         this.publisherTab.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)(this.publishersGrid)).BeginInit();
         this.purchaseTab.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)(this.purchasesGrid)).BeginInit();
         this.itemTab.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)(this.itemsGrid)).BeginInit();
         this.storeTab.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)(this.storeGrid)).BeginInit();
         this.userTab.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.usersGrid)).BeginInit();
         this.SuspendLayout();
         // 
         // menuStrip1
@@ -300,27 +300,27 @@ partial class UserForm {
         this.тренерToolStripMenuItem1.Size = new System.Drawing.Size(269, 22);
         this.тренерToolStripMenuItem1.Text = "Тренер";
         // 
-        // tabControl1
+        // tabs
         // 
-        this.tabControl1.Controls.Add(this.bookTab);
-        this.tabControl1.Controls.Add(this.categoryTab);
-        this.tabControl1.Controls.Add(this.customerTab);
-        this.tabControl1.Controls.Add(this.deliveryTab);
-        this.tabControl1.Controls.Add(this.priceTab);
-        this.tabControl1.Controls.Add(this.publisherTab);
-        this.tabControl1.Controls.Add(this.purchaseTab);
-        this.tabControl1.Controls.Add(this.itemTab);
-        this.tabControl1.Controls.Add(this.storeTab);
-        this.tabControl1.Controls.Add(this.userTab);
-        this.tabControl1.Location = new System.Drawing.Point(2, 147);
-        this.tabControl1.Name = "tabControl1";
-        this.tabControl1.SelectedIndex = 0;
-        this.tabControl1.Size = new System.Drawing.Size(797, 304);
-        this.tabControl1.TabIndex = 5;
+        this.tabs.Controls.Add(this.bookTab);
+        this.tabs.Controls.Add(this.categoryTab);
+        this.tabs.Controls.Add(this.customerTab);
+        this.tabs.Controls.Add(this.deliveryTab);
+        this.tabs.Controls.Add(this.priceTab);
+        this.tabs.Controls.Add(this.publisherTab);
+        this.tabs.Controls.Add(this.purchaseTab);
+        this.tabs.Controls.Add(this.itemTab);
+        this.tabs.Controls.Add(this.storeTab);
+        this.tabs.Controls.Add(this.userTab);
+        this.tabs.Location = new System.Drawing.Point(2, 147);
+        this.tabs.Name = "tabs";
+        this.tabs.SelectedIndex = 0;
+        this.tabs.Size = new System.Drawing.Size(797, 304);
+        this.tabs.TabIndex = 5;
         // 
         // bookTab
         // 
-        this.bookTab.Controls.Add(this.dataGridView1);
+        this.bookTab.Controls.Add(this.booksGrid);
         this.bookTab.Location = new System.Drawing.Point(4, 22);
         this.bookTab.Name = "bookTab";
         this.bookTab.Padding = new System.Windows.Forms.Padding(3);
@@ -329,118 +329,16 @@ partial class UserForm {
         this.bookTab.Text = "Books";
         this.bookTab.UseVisualStyleBackColor = true;
         // 
-        // dataGridView1
+        // booksGrid
         // 
-        this.dataGridView1.AllowUserToAddRows = false;
-        this.dataGridView1.AllowUserToDeleteRows = false;
-        this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.id, this.name, this.publisherName, this.categoryName, this.deleteBook, this.editBook });
-        this.dataGridView1.Location = new System.Drawing.Point(1, 0);
-        this.dataGridView1.Name = "dataGridView1";
-        this.dataGridView1.Size = new System.Drawing.Size(787, 277);
-        this.dataGridView1.TabIndex = 0;
-        // 
-        // categoryTab
-        // 
-        this.categoryTab.Controls.Add(this.dataGridView2);
-        this.categoryTab.Location = new System.Drawing.Point(4, 22);
-        this.categoryTab.Name = "categoryTab";
-        this.categoryTab.Padding = new System.Windows.Forms.Padding(3);
-        this.categoryTab.Size = new System.Drawing.Size(789, 278);
-        this.categoryTab.TabIndex = 1;
-        this.categoryTab.Text = "Categories";
-        this.categoryTab.UseVisualStyleBackColor = true;
-        // 
-        // dataGridView2
-        // 
-        this.dataGridView2.AllowUserToAddRows = false;
-        this.dataGridView2.AllowUserToDeleteRows = false;
-        this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idCategory, this.nameCategory, this.delelteCategory, this.editCategory });
-        this.dataGridView2.Location = new System.Drawing.Point(1, 1);
-        this.dataGridView2.Name = "dataGridView2";
-        this.dataGridView2.Size = new System.Drawing.Size(787, 280);
-        this.dataGridView2.TabIndex = 0;
-        // 
-        // customerTab
-        // 
-        this.customerTab.Controls.Add(this.dataGridView3);
-        this.customerTab.Location = new System.Drawing.Point(4, 22);
-        this.customerTab.Name = "customerTab";
-        this.customerTab.Size = new System.Drawing.Size(789, 278);
-        this.customerTab.TabIndex = 2;
-        this.customerTab.Text = "Customers";
-        this.customerTab.UseVisualStyleBackColor = true;
-        // 
-        // deliveryTab
-        // 
-        this.deliveryTab.Controls.Add(this.dataGridView4);
-        this.deliveryTab.Location = new System.Drawing.Point(4, 22);
-        this.deliveryTab.Name = "deliveryTab";
-        this.deliveryTab.Size = new System.Drawing.Size(789, 278);
-        this.deliveryTab.TabIndex = 3;
-        this.deliveryTab.Text = "Deliveries";
-        this.deliveryTab.UseVisualStyleBackColor = true;
-        // 
-        // priceTab
-        // 
-        this.priceTab.Controls.Add(this.dataGridView5);
-        this.priceTab.Location = new System.Drawing.Point(4, 22);
-        this.priceTab.Name = "priceTab";
-        this.priceTab.Size = new System.Drawing.Size(789, 278);
-        this.priceTab.TabIndex = 4;
-        this.priceTab.Text = "Prices";
-        this.priceTab.UseVisualStyleBackColor = true;
-        // 
-        // publisherTab
-        // 
-        this.publisherTab.Controls.Add(this.dataGridView6);
-        this.publisherTab.Location = new System.Drawing.Point(4, 22);
-        this.publisherTab.Name = "publisherTab";
-        this.publisherTab.Size = new System.Drawing.Size(789, 278);
-        this.publisherTab.TabIndex = 5;
-        this.publisherTab.Text = "Publishers";
-        this.publisherTab.UseVisualStyleBackColor = true;
-        // 
-        // purchaseTab
-        // 
-        this.purchaseTab.Controls.Add(this.dataGridView7);
-        this.purchaseTab.Location = new System.Drawing.Point(4, 22);
-        this.purchaseTab.Name = "purchaseTab";
-        this.purchaseTab.Size = new System.Drawing.Size(789, 278);
-        this.purchaseTab.TabIndex = 6;
-        this.purchaseTab.Text = "Purchases";
-        this.purchaseTab.UseVisualStyleBackColor = true;
-        // 
-        // itemTab
-        // 
-        this.itemTab.Controls.Add(this.dataGridView8);
-        this.itemTab.Location = new System.Drawing.Point(4, 22);
-        this.itemTab.Name = "itemTab";
-        this.itemTab.Size = new System.Drawing.Size(789, 278);
-        this.itemTab.TabIndex = 7;
-        this.itemTab.Text = "Items";
-        this.itemTab.UseVisualStyleBackColor = true;
-        // 
-        // storeTab
-        // 
-        this.storeTab.Controls.Add(this.dataGridView9);
-        this.storeTab.Location = new System.Drawing.Point(4, 22);
-        this.storeTab.Name = "storeTab";
-        this.storeTab.Size = new System.Drawing.Size(789, 278);
-        this.storeTab.TabIndex = 8;
-        this.storeTab.Text = "Store";
-        this.storeTab.UseVisualStyleBackColor = true;
-        // 
-        // userTab
-        // 
-        this.userTab.Controls.Add(this.dataGridView10);
-        this.userTab.Location = new System.Drawing.Point(4, 22);
-        this.userTab.Name = "userTab";
-        this.userTab.Size = new System.Drawing.Size(789, 278);
-        this.userTab.TabIndex = 9;
-        this.userTab.Text = "Users";
-        this.userTab.UseVisualStyleBackColor = true;
+        this.booksGrid.AllowUserToAddRows = false;
+        this.booksGrid.AllowUserToDeleteRows = false;
+        this.booksGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.booksGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.id, this.name, this.publisherName, this.categoryName, this.deleteBook, this.editBook });
+        this.booksGrid.Location = new System.Drawing.Point(1, 0);
+        this.booksGrid.Name = "booksGrid";
+        this.booksGrid.Size = new System.Drawing.Size(787, 277);
+        this.booksGrid.TabIndex = 0;
         // 
         // id
         // 
@@ -472,6 +370,28 @@ partial class UserForm {
         this.editBook.HeaderText = "Edit";
         this.editBook.Name = "editBook";
         // 
+        // categoryTab
+        // 
+        this.categoryTab.Controls.Add(this.categoriesGrid);
+        this.categoryTab.Location = new System.Drawing.Point(4, 22);
+        this.categoryTab.Name = "categoryTab";
+        this.categoryTab.Padding = new System.Windows.Forms.Padding(3);
+        this.categoryTab.Size = new System.Drawing.Size(789, 278);
+        this.categoryTab.TabIndex = 1;
+        this.categoryTab.Text = "Categories";
+        this.categoryTab.UseVisualStyleBackColor = true;
+        // 
+        // categoriesGrid
+        // 
+        this.categoriesGrid.AllowUserToAddRows = false;
+        this.categoriesGrid.AllowUserToDeleteRows = false;
+        this.categoriesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.categoriesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idCategory, this.nameCategory, this.delelteCategory, this.editCategory });
+        this.categoriesGrid.Location = new System.Drawing.Point(1, 1);
+        this.categoriesGrid.Name = "categoriesGrid";
+        this.categoriesGrid.Size = new System.Drawing.Size(787, 280);
+        this.categoriesGrid.TabIndex = 0;
+        // 
         // idCategory
         // 
         this.idCategory.HeaderText = "Id";
@@ -494,16 +414,26 @@ partial class UserForm {
         this.editCategory.HeaderText = "Edit";
         this.editCategory.Name = "editCategory";
         // 
-        // dataGridView3
+        // customerTab
         // 
-        this.dataGridView3.AllowUserToAddRows = false;
-        this.dataGridView3.AllowUserToDeleteRows = false;
-        this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idCustomer, this.firstNameCustomer, this.lastNameCustomer, this.deleteCustomer, this.editCustomer });
-        this.dataGridView3.Location = new System.Drawing.Point(1, 1);
-        this.dataGridView3.Name = "dataGridView3";
-        this.dataGridView3.Size = new System.Drawing.Size(787, 276);
-        this.dataGridView3.TabIndex = 0;
+        this.customerTab.Controls.Add(this.customersGrid);
+        this.customerTab.Location = new System.Drawing.Point(4, 22);
+        this.customerTab.Name = "customerTab";
+        this.customerTab.Size = new System.Drawing.Size(789, 278);
+        this.customerTab.TabIndex = 2;
+        this.customerTab.Text = "Customers";
+        this.customerTab.UseVisualStyleBackColor = true;
+        // 
+        // customersGrid
+        // 
+        this.customersGrid.AllowUserToAddRows = false;
+        this.customersGrid.AllowUserToDeleteRows = false;
+        this.customersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.customersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idCustomer, this.firstNameCustomer, this.lastNameCustomer, this.deleteCustomer, this.editCustomer });
+        this.customersGrid.Location = new System.Drawing.Point(1, 1);
+        this.customersGrid.Name = "customersGrid";
+        this.customersGrid.Size = new System.Drawing.Size(787, 276);
+        this.customersGrid.TabIndex = 0;
         // 
         // idCustomer
         // 
@@ -530,16 +460,26 @@ partial class UserForm {
         this.editCustomer.HeaderText = "Edit";
         this.editCustomer.Name = "editCustomer";
         // 
-        // dataGridView4
+        // deliveryTab
         // 
-        this.dataGridView4.AllowUserToAddRows = false;
-        this.dataGridView4.AllowUserToDeleteRows = false;
-        this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idDelivery, this.bookIdDelivery, this.dateDelivery, this.booksCountDelivery, this.priceDelivery, this.deleteDelivery, this.editDelivery });
-        this.dataGridView4.Location = new System.Drawing.Point(2, 1);
-        this.dataGridView4.Name = "dataGridView4";
-        this.dataGridView4.Size = new System.Drawing.Size(786, 276);
-        this.dataGridView4.TabIndex = 0;
+        this.deliveryTab.Controls.Add(this.deliveriesGrid);
+        this.deliveryTab.Location = new System.Drawing.Point(4, 22);
+        this.deliveryTab.Name = "deliveryTab";
+        this.deliveryTab.Size = new System.Drawing.Size(789, 278);
+        this.deliveryTab.TabIndex = 3;
+        this.deliveryTab.Text = "Deliveries";
+        this.deliveryTab.UseVisualStyleBackColor = true;
+        // 
+        // deliveriesGrid
+        // 
+        this.deliveriesGrid.AllowUserToAddRows = false;
+        this.deliveriesGrid.AllowUserToDeleteRows = false;
+        this.deliveriesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.deliveriesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idDelivery, this.bookIdDelivery, this.dateDelivery, this.booksCountDelivery, this.priceDelivery, this.deleteDelivery, this.editDelivery });
+        this.deliveriesGrid.Location = new System.Drawing.Point(2, 1);
+        this.deliveriesGrid.Name = "deliveriesGrid";
+        this.deliveriesGrid.Size = new System.Drawing.Size(786, 276);
+        this.deliveriesGrid.TabIndex = 0;
         // 
         // idDelivery
         // 
@@ -576,16 +516,26 @@ partial class UserForm {
         this.editDelivery.HeaderText = "Edit";
         this.editDelivery.Name = "editDelivery";
         // 
-        // dataGridView5
+        // priceTab
         // 
-        this.dataGridView5.AllowUserToAddRows = false;
-        this.dataGridView5.AllowUserToDeleteRows = false;
-        this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idPrice, this.datePrice, this.pricePrice, this.deletePrice, this.eidtPrice });
-        this.dataGridView5.Location = new System.Drawing.Point(4, 3);
-        this.dataGridView5.Name = "dataGridView5";
-        this.dataGridView5.Size = new System.Drawing.Size(784, 274);
-        this.dataGridView5.TabIndex = 0;
+        this.priceTab.Controls.Add(this.pricesGrid);
+        this.priceTab.Location = new System.Drawing.Point(4, 22);
+        this.priceTab.Name = "priceTab";
+        this.priceTab.Size = new System.Drawing.Size(789, 278);
+        this.priceTab.TabIndex = 4;
+        this.priceTab.Text = "Prices";
+        this.priceTab.UseVisualStyleBackColor = true;
+        // 
+        // pricesGrid
+        // 
+        this.pricesGrid.AllowUserToAddRows = false;
+        this.pricesGrid.AllowUserToDeleteRows = false;
+        this.pricesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.pricesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idPrice, this.datePrice, this.pricePrice, this.deletePrice, this.eidtPrice });
+        this.pricesGrid.Location = new System.Drawing.Point(4, 3);
+        this.pricesGrid.Name = "pricesGrid";
+        this.pricesGrid.Size = new System.Drawing.Size(784, 274);
+        this.pricesGrid.TabIndex = 0;
         // 
         // idPrice
         // 
@@ -612,16 +562,26 @@ partial class UserForm {
         this.eidtPrice.HeaderText = "Edit";
         this.eidtPrice.Name = "eidtPrice";
         // 
-        // dataGridView6
+        // publisherTab
         // 
-        this.dataGridView6.AllowUserToAddRows = false;
-        this.dataGridView6.AllowUserToDeleteRows = false;
-        this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idPublisher, this.namePublisher, this.deletePublisher, this.editPublisher });
-        this.dataGridView6.Location = new System.Drawing.Point(3, 1);
-        this.dataGridView6.Name = "dataGridView6";
-        this.dataGridView6.Size = new System.Drawing.Size(785, 276);
-        this.dataGridView6.TabIndex = 0;
+        this.publisherTab.Controls.Add(this.publishersGrid);
+        this.publisherTab.Location = new System.Drawing.Point(4, 22);
+        this.publisherTab.Name = "publisherTab";
+        this.publisherTab.Size = new System.Drawing.Size(789, 278);
+        this.publisherTab.TabIndex = 5;
+        this.publisherTab.Text = "Publishers";
+        this.publisherTab.UseVisualStyleBackColor = true;
+        // 
+        // publishersGrid
+        // 
+        this.publishersGrid.AllowUserToAddRows = false;
+        this.publishersGrid.AllowUserToDeleteRows = false;
+        this.publishersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.publishersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idPublisher, this.namePublisher, this.deletePublisher, this.editPublisher });
+        this.publishersGrid.Location = new System.Drawing.Point(3, 1);
+        this.publishersGrid.Name = "publishersGrid";
+        this.publishersGrid.Size = new System.Drawing.Size(785, 276);
+        this.publishersGrid.TabIndex = 0;
         // 
         // idPublisher
         // 
@@ -643,16 +603,26 @@ partial class UserForm {
         this.editPublisher.HeaderText = "Edit";
         this.editPublisher.Name = "editPublisher";
         // 
-        // dataGridView7
+        // purchaseTab
         // 
-        this.dataGridView7.AllowUserToAddRows = false;
-        this.dataGridView7.AllowUserToDeleteRows = false;
-        this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idPurchase, this.customerSurnamePurchase, this.datePurchase, this.deletePuchase, this.editPurchase });
-        this.dataGridView7.Location = new System.Drawing.Point(2, 1);
-        this.dataGridView7.Name = "dataGridView7";
-        this.dataGridView7.Size = new System.Drawing.Size(786, 276);
-        this.dataGridView7.TabIndex = 0;
+        this.purchaseTab.Controls.Add(this.purchasesGrid);
+        this.purchaseTab.Location = new System.Drawing.Point(4, 22);
+        this.purchaseTab.Name = "purchaseTab";
+        this.purchaseTab.Size = new System.Drawing.Size(789, 278);
+        this.purchaseTab.TabIndex = 6;
+        this.purchaseTab.Text = "Purchases";
+        this.purchaseTab.UseVisualStyleBackColor = true;
+        // 
+        // purchasesGrid
+        // 
+        this.purchasesGrid.AllowUserToAddRows = false;
+        this.purchasesGrid.AllowUserToDeleteRows = false;
+        this.purchasesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.purchasesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idPurchase, this.customerSurnamePurchase, this.datePurchase, this.deletePuchase, this.editPurchase });
+        this.purchasesGrid.Location = new System.Drawing.Point(2, 1);
+        this.purchasesGrid.Name = "purchasesGrid";
+        this.purchasesGrid.Size = new System.Drawing.Size(786, 276);
+        this.purchasesGrid.TabIndex = 0;
         // 
         // idPurchase
         // 
@@ -679,16 +649,26 @@ partial class UserForm {
         this.editPurchase.HeaderText = "Edit";
         this.editPurchase.Name = "editPurchase";
         // 
-        // dataGridView8
+        // itemTab
         // 
-        this.dataGridView8.AllowUserToAddRows = false;
-        this.dataGridView8.AllowUserToDeleteRows = false;
-        this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idItem, this.purchaseIdItem, this.bookIdItem, this.booksCountItem, this.priceIdItem, this.deleteItem, this.editItem });
-        this.dataGridView8.Location = new System.Drawing.Point(1, 0);
-        this.dataGridView8.Name = "dataGridView8";
-        this.dataGridView8.Size = new System.Drawing.Size(787, 277);
-        this.dataGridView8.TabIndex = 0;
+        this.itemTab.Controls.Add(this.itemsGrid);
+        this.itemTab.Location = new System.Drawing.Point(4, 22);
+        this.itemTab.Name = "itemTab";
+        this.itemTab.Size = new System.Drawing.Size(789, 278);
+        this.itemTab.TabIndex = 7;
+        this.itemTab.Text = "Items";
+        this.itemTab.UseVisualStyleBackColor = true;
+        // 
+        // itemsGrid
+        // 
+        this.itemsGrid.AllowUserToAddRows = false;
+        this.itemsGrid.AllowUserToDeleteRows = false;
+        this.itemsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.itemsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idItem, this.purchaseIdItem, this.bookIdItem, this.booksCountItem, this.priceIdItem, this.deleteItem, this.editItem });
+        this.itemsGrid.Location = new System.Drawing.Point(1, 0);
+        this.itemsGrid.Name = "itemsGrid";
+        this.itemsGrid.Size = new System.Drawing.Size(787, 277);
+        this.itemsGrid.TabIndex = 0;
         // 
         // idItem
         // 
@@ -725,16 +705,26 @@ partial class UserForm {
         this.editItem.HeaderText = "Edit";
         this.editItem.Name = "editItem";
         // 
-        // dataGridView9
+        // storeTab
         // 
-        this.dataGridView9.AllowUserToAddRows = false;
-        this.dataGridView9.AllowUserToDeleteRows = false;
-        this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.bookIdStore, this.booksCountStore, this.priceStore, this.deleteStore, this.editStore });
-        this.dataGridView9.Location = new System.Drawing.Point(1, 1);
-        this.dataGridView9.Name = "dataGridView9";
-        this.dataGridView9.Size = new System.Drawing.Size(787, 276);
-        this.dataGridView9.TabIndex = 0;
+        this.storeTab.Controls.Add(this.storeGrid);
+        this.storeTab.Location = new System.Drawing.Point(4, 22);
+        this.storeTab.Name = "storeTab";
+        this.storeTab.Size = new System.Drawing.Size(789, 278);
+        this.storeTab.TabIndex = 8;
+        this.storeTab.Text = "Store";
+        this.storeTab.UseVisualStyleBackColor = true;
+        // 
+        // storeGrid
+        // 
+        this.storeGrid.AllowUserToAddRows = false;
+        this.storeGrid.AllowUserToDeleteRows = false;
+        this.storeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.storeGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.bookIdStore, this.booksCountStore, this.priceStore, this.deleteStore, this.editStore });
+        this.storeGrid.Location = new System.Drawing.Point(1, 1);
+        this.storeGrid.Name = "storeGrid";
+        this.storeGrid.Size = new System.Drawing.Size(787, 276);
+        this.storeGrid.TabIndex = 0;
         // 
         // bookIdStore
         // 
@@ -761,16 +751,26 @@ partial class UserForm {
         this.editStore.HeaderText = "Edit";
         this.editStore.Name = "editStore";
         // 
-        // dataGridView10
+        // userTab
         // 
-        this.dataGridView10.AllowUserToAddRows = false;
-        this.dataGridView10.AllowUserToDeleteRows = false;
-        this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idUsers, this.loginUser, this.passwordUser, this.firstNameUser, this.lastNameUser, this.roleUser, this.saltUser, this.deleteUser, this.editUser });
-        this.dataGridView10.Location = new System.Drawing.Point(0, 0);
-        this.dataGridView10.Name = "dataGridView10";
-        this.dataGridView10.Size = new System.Drawing.Size(786, 275);
-        this.dataGridView10.TabIndex = 0;
+        this.userTab.Controls.Add(this.usersGrid);
+        this.userTab.Location = new System.Drawing.Point(4, 22);
+        this.userTab.Name = "userTab";
+        this.userTab.Size = new System.Drawing.Size(789, 278);
+        this.userTab.TabIndex = 9;
+        this.userTab.Text = "Users";
+        this.userTab.UseVisualStyleBackColor = true;
+        // 
+        // usersGrid
+        // 
+        this.usersGrid.AllowUserToAddRows = false;
+        this.usersGrid.AllowUserToDeleteRows = false;
+        this.usersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.usersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idUsers, this.loginUser, this.passwordUser, this.firstNameUser, this.lastNameUser, this.roleUser, this.saltUser, this.deleteUser, this.editUser });
+        this.usersGrid.Location = new System.Drawing.Point(0, 0);
+        this.usersGrid.Name = "usersGrid";
+        this.usersGrid.Size = new System.Drawing.Size(786, 275);
+        this.usersGrid.TabIndex = 0;
         // 
         // idUsers
         // 
@@ -823,36 +823,39 @@ partial class UserForm {
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Controls.Add(this.tabControl1);
+        this.Controls.Add(this.tabs);
         this.Controls.Add(this.menuStrip1);
         this.Name = "UserForm";
         this.Text = "UserForm";
+        this.Load += new System.EventHandler(this.loadData);
         this.menuStrip1.ResumeLayout(false);
         this.menuStrip1.PerformLayout();
-        this.tabControl1.ResumeLayout(false);
+        this.tabs.ResumeLayout(false);
         this.bookTab.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.booksGrid)).EndInit();
         this.categoryTab.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.categoriesGrid)).EndInit();
         this.customerTab.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)(this.customersGrid)).EndInit();
         this.deliveryTab.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)(this.deliveriesGrid)).EndInit();
         this.priceTab.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)(this.pricesGrid)).EndInit();
         this.publisherTab.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)(this.publishersGrid)).EndInit();
         this.purchaseTab.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)(this.purchasesGrid)).EndInit();
         this.itemTab.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)(this.itemsGrid)).EndInit();
         this.storeTab.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)(this.storeGrid)).EndInit();
         this.userTab.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.usersGrid)).EndInit();
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.TabControl tabs;
 
     private System.Windows.Forms.DataGridViewTextBoxColumn idUsers;
     private System.Windows.Forms.DataGridViewTextBoxColumn loginUser;
@@ -869,7 +872,7 @@ partial class UserForm {
     private System.Windows.Forms.DataGridViewTextBoxColumn priceStore;
     private System.Windows.Forms.DataGridViewButtonColumn deleteStore;
     private System.Windows.Forms.DataGridViewButtonColumn editStore;
-    private System.Windows.Forms.DataGridView dataGridView10;
+    private System.Windows.Forms.DataGridView usersGrid;
 
     private System.Windows.Forms.DataGridViewTextBoxColumn idItem;
     private System.Windows.Forms.DataGridViewTextBoxColumn purchaseIdItem;
@@ -878,9 +881,9 @@ partial class UserForm {
     private System.Windows.Forms.DataGridViewTextBoxColumn priceIdItem;
     private System.Windows.Forms.DataGridViewButtonColumn deleteItem;
     private System.Windows.Forms.DataGridViewButtonColumn editItem;
-    private System.Windows.Forms.DataGridView dataGridView9;
+    private System.Windows.Forms.DataGridView storesGrid;
 
-    private System.Windows.Forms.DataGridView dataGridView8;
+    private System.Windows.Forms.DataGridView itemsGrid;
 
     private System.Windows.Forms.DataGridViewTextBoxColumn idPurchase;
     private System.Windows.Forms.DataGridViewTextBoxColumn customerSurnamePurchase;
@@ -892,9 +895,9 @@ partial class UserForm {
     private System.Windows.Forms.DataGridViewTextBoxColumn namePublisher;
     private System.Windows.Forms.DataGridViewButtonColumn deletePublisher;
     private System.Windows.Forms.DataGridViewButtonColumn editPublisher;
-    private System.Windows.Forms.DataGridView dataGridView7;
+    private System.Windows.Forms.DataGridView purchasesGrid;
 
-    private System.Windows.Forms.DataGridView dataGridView6;
+    private System.Windows.Forms.DataGridView publishersGrid;
 
     private System.Windows.Forms.DataGridViewTextBoxColumn idPrice;
     private System.Windows.Forms.DataGridViewTextBoxColumn datePrice;
@@ -909,9 +912,9 @@ partial class UserForm {
     private System.Windows.Forms.DataGridViewTextBoxColumn priceDelivery;
     private System.Windows.Forms.DataGridViewButtonColumn deleteDelivery;
     private System.Windows.Forms.DataGridViewButtonColumn editDelivery;
-    private System.Windows.Forms.DataGridView dataGridView5;
+    private System.Windows.Forms.DataGridView pricesGrid;
 
-    private System.Windows.Forms.DataGridView dataGridView4;
+    private System.Windows.Forms.DataGridView deliveriesGrid;
 
     private System.Windows.Forms.DataGridViewTextBoxColumn idCustomer;
     private System.Windows.Forms.DataGridViewTextBoxColumn firstNameCustomer;
@@ -919,7 +922,7 @@ partial class UserForm {
     private System.Windows.Forms.DataGridViewButtonColumn deleteCustomer;
     private System.Windows.Forms.DataGridViewButtonColumn editCustomer;
 
-    private System.Windows.Forms.DataGridView dataGridView3;
+    private System.Windows.Forms.DataGridView customersGrid;
 
     private System.Windows.Forms.DataGridViewButtonColumn delelteCategory;
     private System.Windows.Forms.DataGridViewButtonColumn editCategory;
@@ -934,7 +937,7 @@ partial class UserForm {
     private System.Windows.Forms.DataGridViewTextBoxColumn name;
     private System.Windows.Forms.DataGridViewTextBoxColumn publisherName;
     private System.Windows.Forms.DataGridViewTextBoxColumn categoryName;
-    private System.Windows.Forms.DataGridView dataGridView2;
+    private System.Windows.Forms.DataGridView categoriesGrid;
 
     private System.Windows.Forms.TabPage bookTab;
     private System.Windows.Forms.TabPage customerTab;
@@ -944,9 +947,9 @@ partial class UserForm {
     private System.Windows.Forms.TabPage purchaseTab;
     private System.Windows.Forms.TabPage itemTab;
     private System.Windows.Forms.TabPage storeTab;
-    private System.Windows.Forms.DataGridView dataGridView1;
+    private System.Windows.Forms.DataGridView booksGrid;
 
-    private System.Windows.Forms.TabControl tabControl1;
+    private System.Windows.Forms.DataGridView storeGrid;
     private System.Windows.Forms.TabPage userTab;
     private System.Windows.Forms.TabPage categoryTab;
 

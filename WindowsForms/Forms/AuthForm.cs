@@ -43,7 +43,7 @@ namespace WindowsForms.Forms {
 
                 if (info == null) return;
 
-                var userForm = new UserForm();
+                var userForm = new UserForm(info);
                 userForm.Show();
                 if (info.role == "admin")
                 {

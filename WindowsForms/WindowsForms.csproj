@@ -39,6 +39,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Web.Http.Common.4.0.20126.16343\lib\net40\System.Web.Http.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,8 +66,22 @@
     <Compile Include="Data\Models\Role.cs" />
     <Compile Include="Data\Models\Store.cs" />
     <Compile Include="Data\Models\User.cs" />
+    <Compile Include="Data\Service\Exceptions\NothingFoundException.cs" />
+    <Compile Include="Data\Service\Exceptions\ServerErrorException.cs" />
+    <Compile Include="Data\Service\Exceptions\TokenExpiredException.cs" />
+    <Compile Include="Data\Service\Exceptions\UnauthorizedException.cs" />
     <Compile Include="Data\Service\IAuthService.cs" />
     <Compile Include="Data\Service\Inheritance\AuthService.cs" />
+    <Compile Include="Data\Service\Inheritance\BookService.cs" />
+    <Compile Include="Data\Service\Inheritance\CategoryService.cs" />
+    <Compile Include="Data\Service\Inheritance\CrudService.cs" />
+    <Compile Include="Data\Service\Inheritance\CustomerService.cs" />
+    <Compile Include="Data\Service\Inheritance\DeliveryService.cs" />
+    <Compile Include="Data\Service\Inheritance\PriceChangeService.cs" />
+    <Compile Include="Data\Service\Inheritance\PublisherService.cs" />
+    <Compile Include="Data\Service\Inheritance\PurchaseItemService.cs" />
+    <Compile Include="Data\Service\Inheritance\PurchaseService.cs" />
+    <Compile Include="Data\Service\Inheritance\StoreService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,3 +14,5 @@ C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.pdb
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.RegisterForm.resources
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.AuthForm.resources
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.UserForm.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\bin\Debug\System.Web.Http.Common.dll
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\bin\Debug\System.Web.Http.Common.xml
