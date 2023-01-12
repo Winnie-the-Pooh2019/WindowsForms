@@ -81,4 +81,10 @@ public partial class RegisterForm : Form {
     {
         btnLogin.ForeColor = Color.DarkTurquoise;
     }
+
+    private void label5_Click(object sender, EventArgs e) {
+    }
+
+    private void label2_Click(object sender, EventArgs e) {
+    }
 }

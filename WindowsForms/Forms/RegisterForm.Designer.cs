@@ -34,47 +34,40 @@ namespace WindowsForms.Forms;
                 this.label3 = new System.Windows.Forms.Label();
                 this.tbPassword = new System.Windows.Forms.TextBox();
                 this.panel4 = new System.Windows.Forms.Panel();
-                this.pictureBox2 = new System.Windows.Forms.PictureBox();
                 this.panel1 = new System.Windows.Forms.Panel();
                 this.panel3 = new System.Windows.Forms.Panel();
                 this.label2 = new System.Windows.Forms.Label();
                 this.tbUsername = new System.Windows.Forms.TextBox();
-                this.pictureBox1 = new System.Windows.Forms.PictureBox();
                 this.label1 = new System.Windows.Forms.Label();
                 this.button1 = new System.Windows.Forms.Button();
                 this.panel5 = new System.Windows.Forms.Panel();
                 this.label4 = new System.Windows.Forms.Label();
                 this.tbName = new System.Windows.Forms.TextBox();
                 this.panel6 = new System.Windows.Forms.Panel();
-                this.pictureBox3 = new System.Windows.Forms.PictureBox();
                 this.panel7 = new System.Windows.Forms.Panel();
+                this.panel8 = new System.Windows.Forms.Panel();
                 this.label5 = new System.Windows.Forms.Label();
                 this.tbSurname = new System.Windows.Forms.TextBox();
-                this.panel8 = new System.Windows.Forms.Panel();
-                this.pictureBox4 = new System.Windows.Forms.PictureBox();
                 this.panel2.SuspendLayout();
-                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
                 this.panel1.SuspendLayout();
-                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
                 this.panel5.SuspendLayout();
-                ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
                 this.panel7.SuspendLayout();
-                ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
                 this.SuspendLayout();
                 // 
                 // btnLogin
                 // 
+                this.btnLogin.BackColor = System.Drawing.Color.White;
                 this.btnLogin.FlatAppearance.BorderSize = 2;
                 this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
                 this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.btnLogin.ForeColor = System.Drawing.Color.DarkTurquoise;
+                this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.btnLogin.ForeColor = System.Drawing.Color.Black;
                 this.btnLogin.Location = new System.Drawing.Point(105, 602);
                 this.btnLogin.Name = "btnLogin";
                 this.btnLogin.Size = new System.Drawing.Size(215, 41);
                 this.btnLogin.TabIndex = 12;
                 this.btnLogin.Text = "Зарегистрироваться";
-                this.btnLogin.UseVisualStyleBackColor = true;
+                this.btnLogin.UseVisualStyleBackColor = false;
                 this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
                 this.btnLogin.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
                 this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
@@ -84,7 +77,6 @@ namespace WindowsForms.Forms;
                 this.panel2.Controls.Add(this.label3);
                 this.panel2.Controls.Add(this.tbPassword);
                 this.panel2.Controls.Add(this.panel4);
-                this.panel2.Controls.Add(this.pictureBox2);
                 this.panel2.Location = new System.Drawing.Point(56, 182);
                 this.panel2.Name = "panel2";
                 this.panel2.Size = new System.Drawing.Size(463, 55);
@@ -120,21 +112,11 @@ namespace WindowsForms.Forms;
                 this.panel4.Size = new System.Drawing.Size(260, 1);
                 this.panel4.TabIndex = 5;
                 // 
-                // pictureBox2
-                // 
-                this.pictureBox2.Location = new System.Drawing.Point(15, 14);
-                this.pictureBox2.Name = "pictureBox2";
-                this.pictureBox2.Size = new System.Drawing.Size(34, 34);
-                this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-                this.pictureBox2.TabIndex = 4;
-                this.pictureBox2.TabStop = false;
-                // 
                 // panel1
                 // 
                 this.panel1.Controls.Add(this.panel3);
                 this.panel1.Controls.Add(this.label2);
                 this.panel1.Controls.Add(this.tbUsername);
-                this.panel1.Controls.Add(this.pictureBox1);
                 this.panel1.Location = new System.Drawing.Point(56, 91);
                 this.panel1.Name = "panel1";
                 this.panel1.Size = new System.Drawing.Size(463, 59);
@@ -169,15 +151,6 @@ namespace WindowsForms.Forms;
                 this.tbUsername.Size = new System.Drawing.Size(260, 17);
                 this.tbUsername.TabIndex = 3;
                 // 
-                // pictureBox1
-                // 
-                this.pictureBox1.Location = new System.Drawing.Point(15, 17);
-                this.pictureBox1.Name = "pictureBox1";
-                this.pictureBox1.Size = new System.Drawing.Size(34, 34);
-                this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-                this.pictureBox1.TabIndex = 4;
-                this.pictureBox1.TabStop = false;
-                // 
                 // label1
                 // 
                 this.label1.AutoSize = true;
@@ -190,17 +163,18 @@ namespace WindowsForms.Forms;
                 // 
                 // button1
                 // 
+                this.button1.BackColor = System.Drawing.Color.White;
                 this.button1.FlatAppearance.BorderSize = 2;
                 this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
                 this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.button1.ForeColor = System.Drawing.Color.DarkTurquoise;
+                this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.button1.ForeColor = System.Drawing.Color.Black;
                 this.button1.Location = new System.Drawing.Point(359, 602);
                 this.button1.Name = "button1";
                 this.button1.Size = new System.Drawing.Size(126, 41);
                 this.button1.TabIndex = 13;
                 this.button1.Text = "Авторизация";
-                this.button1.UseVisualStyleBackColor = true;
+                this.button1.UseVisualStyleBackColor = false;
                 this.button1.Click += new System.EventHandler(this.button1_Click);
                 this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
                 this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
@@ -210,7 +184,6 @@ namespace WindowsForms.Forms;
                 this.panel5.Controls.Add(this.label4);
                 this.panel5.Controls.Add(this.tbName);
                 this.panel5.Controls.Add(this.panel6);
-                this.panel5.Controls.Add(this.pictureBox3);
                 this.panel5.Location = new System.Drawing.Point(56, 267);
                 this.panel5.Name = "panel5";
                 this.panel5.Size = new System.Drawing.Size(463, 55);
@@ -245,47 +218,15 @@ namespace WindowsForms.Forms;
                 this.panel6.Size = new System.Drawing.Size(260, 1);
                 this.panel6.TabIndex = 5;
                 // 
-                // pictureBox3
-                // 
-                this.pictureBox3.Location = new System.Drawing.Point(15, 14);
-                this.pictureBox3.Name = "pictureBox3";
-                this.pictureBox3.Size = new System.Drawing.Size(34, 34);
-                this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-                this.pictureBox3.TabIndex = 4;
-                this.pictureBox3.TabStop = false;
-                // 
                 // panel7
                 // 
-                this.panel7.Controls.Add(this.label5);
                 this.panel7.Controls.Add(this.tbSurname);
                 this.panel7.Controls.Add(this.panel8);
-                this.panel7.Controls.Add(this.pictureBox4);
-                this.panel7.Location = new System.Drawing.Point(56, 364);
+                this.panel7.Controls.Add(this.label5);
+                this.panel7.Location = new System.Drawing.Point(56, 375);
                 this.panel7.Name = "panel7";
-                this.panel7.Size = new System.Drawing.Size(463, 55);
+                this.panel7.Size = new System.Drawing.Size(463, 63);
                 this.panel7.TabIndex = 15;
-                // 
-                // label5
-                // 
-                this.label5.AutoSize = true;
-                this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.label5.Location = new System.Drawing.Point(55, 19);
-                this.label5.Name = "label5";
-                this.label5.Size = new System.Drawing.Size(75, 18);
-                this.label5.TabIndex = 8;
-                this.label5.Text = "Surname";
-                // 
-                // tbSurname
-                // 
-                this.tbSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-                this.tbSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                this.tbSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                this.tbSurname.ForeColor = System.Drawing.SystemColors.Info;
-                this.tbSurname.Location = new System.Drawing.Point(169, 14);
-                this.tbSurname.Name = "tbSurname";
-                this.tbSurname.Size = new System.Drawing.Size(260, 17);
-                this.tbSurname.TabIndex = 7;
-                this.tbSurname.Text = "\r\n";
                 // 
                 // panel8
                 // 
@@ -295,20 +236,35 @@ namespace WindowsForms.Forms;
                 this.panel8.Size = new System.Drawing.Size(260, 1);
                 this.panel8.TabIndex = 5;
                 // 
-                // pictureBox4
+                // label5
                 // 
-                this.pictureBox4.Location = new System.Drawing.Point(15, 14);
-                this.pictureBox4.Name = "pictureBox4";
-                this.pictureBox4.Size = new System.Drawing.Size(34, 34);
-                this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-                this.pictureBox4.TabIndex = 4;
-                this.pictureBox4.TabStop = false;
+                this.label5.AutoSize = true;
+                this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+                this.label5.Location = new System.Drawing.Point(32, 19);
+                this.label5.Name = "label5";
+                this.label5.Size = new System.Drawing.Size(62, 16);
+                this.label5.TabIndex = 8;
+                this.label5.Text = "Surname";
+                this.label5.Click += new System.EventHandler(this.label5_Click);
+                // 
+                // tbSurname
+                // 
+                this.tbSurname.BackColor = System.Drawing.Color.White;
+                this.tbSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                this.tbSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                this.tbSurname.ForeColor = System.Drawing.SystemColors.ControlText;
+                this.tbSurname.Location = new System.Drawing.Point(169, 19);
+                this.tbSurname.Name = "tbSurname";
+                this.tbSurname.Size = new System.Drawing.Size(260, 22);
+                this.tbSurname.TabIndex = 7;
+                this.tbSurname.Text = "\r\n";
                 // 
                 // RegisterForm
                 // 
                 this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                 this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-                this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+                this.BackColor = System.Drawing.Color.White;
                 this.ClientSize = new System.Drawing.Size(576, 680);
                 this.Controls.Add(this.panel7);
                 this.Controls.Add(this.panel5);
@@ -324,16 +280,12 @@ namespace WindowsForms.Forms;
                 this.Load += new System.EventHandler(this.RegisterForm_Load);
                 this.panel2.ResumeLayout(false);
                 this.panel2.PerformLayout();
-                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
                 this.panel1.ResumeLayout(false);
                 this.panel1.PerformLayout();
-                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
                 this.panel5.ResumeLayout(false);
                 this.panel5.PerformLayout();
-                ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
                 this.panel7.ResumeLayout(false);
                 this.panel7.PerformLayout();
-                ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
                 this.ResumeLayout(false);
                 this.PerformLayout();
             }
@@ -342,13 +294,11 @@ namespace WindowsForms.Forms;
             private System.Windows.Forms.Label label5;
             private System.Windows.Forms.TextBox tbSurname;
             private System.Windows.Forms.Panel panel8;
-            private System.Windows.Forms.PictureBox pictureBox4;
 
             private System.Windows.Forms.Panel panel5;
             private System.Windows.Forms.Label label4;
             private System.Windows.Forms.TextBox tbName;
             private System.Windows.Forms.Panel panel6;
-            private System.Windows.Forms.PictureBox pictureBox3;
 
         #endregion
 
@@ -357,12 +307,10 @@ namespace WindowsForms.Forms;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbUsername;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
     }
