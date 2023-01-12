@@ -113,6 +113,12 @@
     <Compile Include="Forms\CutomerCreate.Designer.cs">
       <DependentUpon>CutomerCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DeliveryCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeliveryCreate.Designer.cs">
+      <DependentUpon>DeliveryCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PublisherCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CutomerCreate.resx">
       <DependentUpon>CutomerCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeliveryCreate.resx">
+      <DependentUpon>DeliveryCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PublisherCreate.resx">
       <DependentUpon>PublisherCreate.cs</DependentUpon>

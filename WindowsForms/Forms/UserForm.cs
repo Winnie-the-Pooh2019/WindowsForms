@@ -261,8 +261,8 @@ public partial class UserForm : Form {
             var delivery = new Delivery {
                 id = Convert.ToInt32(deliveriesGrid.Rows[e.RowIndex].Cells[0].Value),
                 bookId = Convert.ToInt32(deliveriesGrid.Rows[e.RowIndex].Cells[1].Value),
-                booksCount = Convert.ToInt32(deliveriesGrid.Rows[e.RowIndex].Cells[2].Value),
-                deliveryDate = Convert.ToDateTime(deliveriesGrid.Rows[e.RowIndex].Cells[3].Value),
+                booksCount = Convert.ToInt32(deliveriesGrid.Rows[e.RowIndex].Cells[3].Value),
+                deliveryDate = Convert.ToDateTime(deliveriesGrid.Rows[e.RowIndex].Cells[2].Value),
                 price = Convert.ToDouble(deliveriesGrid.Rows[e.RowIndex].Cells[4].Value)
             };
 
@@ -520,6 +520,12 @@ public partial class UserForm : Form {
 
     private void customerToolStripMenuItem_Click(object sender, EventArgs e) {
         var createBook = new CutomerCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
+
+    private void deliveryCreateMenu_Click(object sender, EventArgs e) {
+        var createBook = new DeliveryCreate(access);
         createBook.ShowDialog();
         load();
     }

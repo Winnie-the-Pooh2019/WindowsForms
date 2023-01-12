@@ -212,6 +212,7 @@ partial class UserForm {
         this.deliveryCreateMenu.Name = "deliveryCreateMenu";
         this.deliveryCreateMenu.Size = new System.Drawing.Size(161, 22);
         this.deliveryCreateMenu.Text = "Delivery";
+        this.deliveryCreateMenu.Click += new System.EventHandler(this.deliveryCreateMenu_Click);
         // 
         // priceCreateMenu
         // 
