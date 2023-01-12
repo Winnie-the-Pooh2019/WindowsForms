@@ -123,8 +123,7 @@ partial class UserForm {
         this.passwordUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.firstNameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
         this.lastNameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.roleUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.saltUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.roleUser = new System.Windows.Forms.DataGridViewComboBoxColumn();
         this.deleteUser = new System.Windows.Forms.DataGridViewButtonColumn();
         this.editUser = new System.Windows.Forms.DataGridViewButtonColumn();
         this.menuStrip1.SuspendLayout();
@@ -775,11 +774,12 @@ partial class UserForm {
         this.usersGrid.AllowUserToAddRows = false;
         this.usersGrid.AllowUserToDeleteRows = false;
         this.usersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.usersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idUsers, this.loginUser, this.passwordUser, this.firstNameUser, this.lastNameUser, this.roleUser, this.saltUser, this.deleteUser, this.editUser });
+        this.usersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.idUsers, this.loginUser, this.passwordUser, this.firstNameUser, this.lastNameUser, this.roleUser, this.deleteUser, this.editUser });
         this.usersGrid.Location = new System.Drawing.Point(0, 0);
         this.usersGrid.Name = "usersGrid";
         this.usersGrid.Size = new System.Drawing.Size(786, 275);
         this.usersGrid.TabIndex = 0;
+        this.usersGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersGrid_CellContentClick);
         // 
         // idUsers
         // 
@@ -810,12 +810,8 @@ partial class UserForm {
         // 
         this.roleUser.HeaderText = "Role";
         this.roleUser.Name = "roleUser";
-        // 
-        // saltUser
-        // 
-        this.saltUser.HeaderText = "Salt";
-        this.saltUser.Name = "saltUser";
-        this.saltUser.ReadOnly = true;
+        this.roleUser.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+        this.roleUser.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
         // 
         // deleteUser
         // 
@@ -871,8 +867,7 @@ partial class UserForm {
     private System.Windows.Forms.DataGridViewTextBoxColumn passwordUser;
     private System.Windows.Forms.DataGridViewTextBoxColumn firstNameUser;
     private System.Windows.Forms.DataGridViewTextBoxColumn lastNameUser;
-    private System.Windows.Forms.DataGridViewTextBoxColumn roleUser;
-    private System.Windows.Forms.DataGridViewTextBoxColumn saltUser;
+    private System.Windows.Forms.DataGridViewComboBoxColumn roleUser;
     private System.Windows.Forms.DataGridViewButtonColumn deleteUser;
     private System.Windows.Forms.DataGridViewButtonColumn editUser;
 

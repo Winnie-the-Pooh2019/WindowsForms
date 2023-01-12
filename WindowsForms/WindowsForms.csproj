@@ -82,6 +82,7 @@
     <Compile Include="Data\Service\Inheritance\PurchaseItemService.cs" />
     <Compile Include="Data\Service\Inheritance\PurchaseService.cs" />
     <Compile Include="Data\Service\Inheritance\StoreService.cs" />
+    <Compile Include="Data\Service\Inheritance\UserService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

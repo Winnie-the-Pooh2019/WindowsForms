@@ -109,6 +109,8 @@ public class CrudService<T> {
         var builder = new UriBuilder(baseUrl + $"{url}/update");
         var query = HttpUtility.ParseQueryString(string.Empty);
         builder.Query = query.ToString();
+
+        MessageBox.Show(builder.ToString());
         
         var content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
 

@@ -1,8 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
-using System.Security.AccessControl;
-using System.Threading.Tasks;
-using System.Web.ModelBinding;
 using System.Windows.Forms;
 using WindowsForms.Data.Models;
 using WindowsForms.Data.Service.Exceptions;
@@ -12,6 +10,7 @@ namespace WindowsForms.Forms;
 
 public partial class UserForm : Form {
     private Access access;
+
     private readonly BookService bookService;
     private readonly CategoryService categoryService;
     private readonly CustomerService customerService;
@@ -21,6 +20,7 @@ public partial class UserForm : Form {
     private readonly PurchaseService purchaseService;
     private readonly PurchaseItemService purchaseItemService;
     private readonly StoreService storeService;
+    private readonly UserService userService;
 
     private DateTimePicker datePiker;
 
@@ -39,6 +39,7 @@ public partial class UserForm : Form {
         purchaseService = new PurchaseService("purchase", access.accessToken);
         purchaseItemService = new PurchaseItemService("purchaseItem", access.accessToken);
         storeService = new StoreService("store", access.accessToken);
+        userService = new UserService("user", access.accessToken);
 
         InitializeComponent();
     }
@@ -54,6 +55,7 @@ public partial class UserForm : Form {
             var purchases = await purchaseService.getAll();
             var items = await purchaseItemService.getAll();
             var stores = await storeService.getAll();
+            var users = await userService.getAll();
 
             booksGrid.Rows.Clear();
             books.ForEach(book => booksGrid.Rows.Add(book.id, book.name, book.publisherId, book.categoryId));
@@ -84,6 +86,33 @@ public partial class UserForm : Form {
 
             storeGrid.Rows.Clear();
             stores.ForEach(it => storeGrid.Rows.Add(it.bookId, it.booksCount, it.priceChangeId));
+
+            usersGrid.Rows.Clear();
+            // var roleGrid = new DataGridViewComboBoxColumn();
+            // roleGrid.HeaderText = "Role";
+            // roleGrid.Items.AddRange("admin", "user");
+            // usersGrid.Columns.Add(roleGrid);
+            users.ForEach(it => {
+                var row = new DataGridViewRow();
+
+                var cellCombo = new DataGridViewComboBoxCell();
+                cellCombo.DataSource = new List<string> { "user", "admin" };
+                cellCombo.Value = it.role;
+
+                var idt = new DataGridViewTextBoxCell();
+                idt.Value = it.id;
+                var pt = new DataGridViewTextBoxCell();
+                pt.Value = it.password;
+                var lt = new DataGridViewTextBoxCell();
+                lt.Value = it.login;
+                var fnt = new DataGridViewTextBoxCell();
+                fnt.Value = it.firstName;
+                var lnt = new DataGridViewTextBoxCell();
+                lnt.Value = it.lastName;
+
+                row.Cells.AddRange(idt, lt, pt, fnt, lnt, cellCombo);
+                usersGrid.Rows.Add(row);
+            });
         }
         catch (NothingFoundException exception) {
             Console.WriteLine(exception);
@@ -198,12 +227,24 @@ public partial class UserForm : Form {
     }
 
     private async void deliveriesGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        if (e.RowIndex > -1 && e.ColumnIndex == 2) {
+            datePiker = new DateTimePicker();
+            deliveriesGrid.Controls.Add(datePiker);
+            datePiker.Format = DateTimePickerFormat.Short;
+            var rec = deliveriesGrid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+            datePiker.Size = new Size(rec.Width, rec.Height);
+            datePiker.Location = new Point(rec.X, rec.Y);
+            datePiker.TextChanged += pikerDeliveryChanged;
+            // datePiker.CloseUp += pickerClosed;
+            datePiker.Visible = true;
+        }
+
         if (e.RowIndex > -1 && e.ColumnIndex == 5) {
             var delivery = new Delivery {
                 id = Convert.ToInt32(deliveriesGrid.Rows[e.RowIndex].Cells[0].Value),
                 bookId = Convert.ToInt32(deliveriesGrid.Rows[e.RowIndex].Cells[1].Value),
-                booksCount = Convert.ToInt32(deliveriesGrid.Rows[e.RowIndex].Cells[2].Value),
-                deliveryDate = Convert.ToDateTime(deliveriesGrid.Rows[e.RowIndex].Cells[3].Value),
+                booksCount = Convert.ToInt32(deliveriesGrid.Rows[e.RowIndex].Cells[3].Value),
+                deliveryDate = Convert.ToDateTime(deliveriesGrid.Rows[e.RowIndex].Cells[2].Value),
                 price = Convert.ToDouble(deliveriesGrid.Rows[e.RowIndex].Cells[4].Value)
             };
 
@@ -303,11 +344,11 @@ public partial class UserForm : Form {
             var rec = purchasesGrid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
             datePiker.Size = new Size(rec.Width, rec.Height);
             datePiker.Location = new Point(rec.X, rec.Y);
-            // datePiker.TextChanged += pickerChanged;
-            datePiker.CloseUp += pickerClosed;
+            datePiker.TextChanged += pickerPurchaseChanged;
+            // datePiker.CloseUp += pickerClosed;
             datePiker.Visible = true;
         }
-        
+
         if (e.RowIndex > -1 && e.ColumnIndex == 3) {
             var purchase = new Purchase {
                 id = Convert.ToInt32(purchasesGrid.Rows[e.RowIndex].Cells[0].Value),
@@ -340,12 +381,16 @@ public partial class UserForm : Form {
     }
 
     private void pickerClosed(object sender, EventArgs e) {
+        datePiker.Visible = false;
+    }
+
+    private void pickerPurchaseChanged(object sender, EventArgs e) {
         purchasesGrid.CurrentCell.Value = datePiker.Text;
     }
 
-    // private void pickerChanged(object sender, EventArgs e) {
-    //     datePiker.Visible = false;
-    // }
+    private void pikerDeliveryChanged(object sender, EventArgs e) {
+        deliveriesGrid.CurrentCell.Value = datePiker.Text;
+    }
 
     private async void itemsGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
         if (e.RowIndex > -1 && e.ColumnIndex == 5) {
@@ -414,6 +459,44 @@ public partial class UserForm : Form {
                 await storeService.update(store);
                 load();
             }
+        }
+    }
+
+    private async void usersGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        if (e.RowIndex > -1 && e.ColumnIndex == 6) {
+            var user = new User {
+                id = Convert.ToInt32(usersGrid.Rows[e.RowIndex].Cells[0].Value),
+                login = usersGrid.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                password = usersGrid.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                firstName = usersGrid.Rows[e.RowIndex].Cells[3].Value.ToString(),
+                lastName = usersGrid.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                role = usersGrid.Rows[e.RowIndex].Cells[5].Value.ToString()
+            };
+
+            var result = MessageBox.Show($"Вы действительно хотите удалить данные пользователя {user.login}?",
+                "",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes) {
+                await userService.deleteById(user.id);
+                load();
+            }
+        }
+
+        if (e.RowIndex > -1 && e.ColumnIndex == 7) {
+            var user = new User {
+                id = Convert.ToInt32(usersGrid.Rows[e.RowIndex].Cells[0].Value),
+                login = usersGrid.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                password = usersGrid.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                firstName = usersGrid.Rows[e.RowIndex].Cells[3].Value.ToString(),
+                lastName = usersGrid.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                role = usersGrid.Rows[e.RowIndex].Cells[5].Value.ToString()
+            };
+
+            var result = MessageBox.Show($"Вы действительно хотите изменить данные пользователя {user.login}?",
+                "",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                await userService.update(user);
         }
     }
 }

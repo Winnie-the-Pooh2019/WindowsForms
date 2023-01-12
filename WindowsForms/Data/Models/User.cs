@@ -1,6 +1,7 @@
 namespace WindowsForms.Data.Models;
 
 public record User {
+    public int id { get; set; } = 0;
     public string login { get; set; }
     
     public string password { get; set; }
