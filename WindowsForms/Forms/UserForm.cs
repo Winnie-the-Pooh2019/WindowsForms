@@ -529,4 +529,42 @@ public partial class UserForm : Form {
         createBook.ShowDialog();
         load();
     }
+
+    private void priceCreateMenu_Click(object sender, EventArgs e) {
+        var createBook = new PriceCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
+
+    private void purchaseCreateMenu_Click(object sender, EventArgs e) {
+        var createBook = new PurchaseCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
+
+    private void itemCreateMenu_Click(object sender, EventArgs e) {
+        var createBook = new PurchaseItemCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
+
+    private void storeCreateMenu_Click(object sender, EventArgs e) {
+        var createBook = new StoreCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
+
+    private void userCreateMenu_Click(object sender, EventArgs e) {
+        var createBook = new UserCreate(access);
+        createBook.ShowDialog();
+        load();
+    }
+
+    private void exit_Click(object sender, EventArgs e) {
+        var authorizationForm = new AuthForm();
+        if (MessageBox.Show("Are you sure you want to exit", "", MessageBoxButtons.YesNo) !=
+            DialogResult.Yes) return;
+        Close();
+        authorizationForm.Show();
+    }
 }

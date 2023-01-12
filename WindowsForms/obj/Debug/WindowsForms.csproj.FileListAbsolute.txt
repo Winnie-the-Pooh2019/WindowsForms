@@ -21,3 +21,8 @@ C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Form
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.PublisherCreate.resources
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.CutomerCreate.resources
 C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.DeliveryCreate.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.PriceCreate.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.PurchaseCreate.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.PurchaseItemCreate.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.StoreCreate.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.UserCreate.resources

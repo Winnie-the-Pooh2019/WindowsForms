@@ -30,7 +30,6 @@ partial class UserForm {
         this.menuStrip1 = new System.Windows.Forms.MenuStrip();
         this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.exit = new System.Windows.Forms.ToolStripMenuItem();
-        this.добавлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.добавлениеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
         this.bookCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
         this.categoryCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -147,7 +146,7 @@ partial class UserForm {
         // 
         this.menuStrip1.BackColor = System.Drawing.Color.White;
         this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-        this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.менюToolStripMenuItem, this.добавлениеToolStripMenuItem, this.добавлениеToolStripMenuItem1 });
+        this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.менюToolStripMenuItem, this.добавлениеToolStripMenuItem1 });
         this.menuStrip1.Location = new System.Drawing.Point(0, 0);
         this.menuStrip1.Name = "menuStrip1";
         this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -169,13 +168,9 @@ partial class UserForm {
         this.exit.BackColor = System.Drawing.Color.White;
         this.exit.ForeColor = System.Drawing.Color.Black;
         this.exit.Name = "exit";
-        this.exit.Size = new System.Drawing.Size(97, 22);
+        this.exit.Size = new System.Drawing.Size(152, 22);
         this.exit.Text = "Exit";
-        // 
-        // добавлениеToolStripMenuItem
-        // 
-        this.добавлениеToolStripMenuItem.Name = "добавлениеToolStripMenuItem";
-        this.добавлениеToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
+        this.exit.Click += new System.EventHandler(this.exit_Click);
         // 
         // добавлениеToolStripMenuItem1
         // 
@@ -219,6 +214,7 @@ partial class UserForm {
         this.priceCreateMenu.Name = "priceCreateMenu";
         this.priceCreateMenu.Size = new System.Drawing.Size(161, 22);
         this.priceCreateMenu.Text = "Price";
+        this.priceCreateMenu.Click += new System.EventHandler(this.priceCreateMenu_Click);
         // 
         // publisherCreateMenu
         // 
@@ -232,24 +228,28 @@ partial class UserForm {
         this.purchaseCreateMenu.Name = "purchaseCreateMenu";
         this.purchaseCreateMenu.Size = new System.Drawing.Size(161, 22);
         this.purchaseCreateMenu.Text = "Purchase";
+        this.purchaseCreateMenu.Click += new System.EventHandler(this.purchaseCreateMenu_Click);
         // 
         // itemCreateMenu
         // 
         this.itemCreateMenu.Name = "itemCreateMenu";
         this.itemCreateMenu.Size = new System.Drawing.Size(161, 22);
         this.itemCreateMenu.Text = "Purchase item";
+        this.itemCreateMenu.Click += new System.EventHandler(this.itemCreateMenu_Click);
         // 
         // storeCreateMenu
         // 
         this.storeCreateMenu.Name = "storeCreateMenu";
         this.storeCreateMenu.Size = new System.Drawing.Size(161, 22);
         this.storeCreateMenu.Text = "Store";
+        this.storeCreateMenu.Click += new System.EventHandler(this.storeCreateMenu_Click);
         // 
         // userCreateMenu
         // 
         this.userCreateMenu.Name = "userCreateMenu";
         this.userCreateMenu.Size = new System.Drawing.Size(161, 22);
         this.userCreateMenu.Text = "User";
+        this.userCreateMenu.Click += new System.EventHandler(this.userCreateMenu_Click);
         // 
         // tabs
         // 
@@ -918,7 +918,6 @@ partial class UserForm {
     private System.Windows.Forms.MenuStrip menuStrip1;
     private System.Windows.Forms.ToolStripMenuItem менюToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem exit;
-    private System.Windows.Forms.ToolStripMenuItem добавлениеToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem добавлениеToolStripMenuItem1;
     private System.Windows.Forms.ToolStripMenuItem bookCreateMenu;
     private System.Windows.Forms.ToolStripMenuItem categoryCreateMenu;
