@@ -1,0 +1,16 @@
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.AssemblyReference.cache
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Properties.Resources.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.GenerateResource.cache
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\bin\Debug\WindowsForms.exe.config
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\bin\Debug\WindowsForms.exe
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\bin\Debug\WindowsForms.pdb
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.CopyComplete
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.exe
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.pdb
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.RegisterForm.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.AuthForm.resources
+C:\Users\Ivan\source\repos\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Forms.ClientForm.resources
