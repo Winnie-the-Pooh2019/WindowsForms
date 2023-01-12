@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Security.AccessControl;
 using System.Threading.Tasks;
 using System.Web.ModelBinding;
@@ -20,6 +21,8 @@ public partial class UserForm : Form {
     private readonly PurchaseService purchaseService;
     private readonly PurchaseItemService purchaseItemService;
     private readonly StoreService storeService;
+
+    private DateTimePicker datePiker;
 
     // public UserForm() {
     //     InitializeComponent();
@@ -293,6 +296,18 @@ public partial class UserForm : Form {
     }
 
     private async void purchasesGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        if (e.RowIndex > -1 && e.ColumnIndex == 2) {
+            datePiker = new DateTimePicker();
+            purchasesGrid.Controls.Add(datePiker);
+            datePiker.Format = DateTimePickerFormat.Short;
+            var rec = purchasesGrid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+            datePiker.Size = new Size(rec.Width, rec.Height);
+            datePiker.Location = new Point(rec.X, rec.Y);
+            // datePiker.TextChanged += pickerChanged;
+            datePiker.CloseUp += pickerClosed;
+            datePiker.Visible = true;
+        }
+        
         if (e.RowIndex > -1 && e.ColumnIndex == 3) {
             var purchase = new Purchase {
                 id = Convert.ToInt32(purchasesGrid.Rows[e.RowIndex].Cells[0].Value),
@@ -323,6 +338,14 @@ public partial class UserForm : Form {
                 await purchaseService.update(purchase);
         }
     }
+
+    private void pickerClosed(object sender, EventArgs e) {
+        purchasesGrid.CurrentCell.Value = datePiker.Text;
+    }
+
+    // private void pickerChanged(object sender, EventArgs e) {
+    //     datePiker.Visible = false;
+    // }
 
     private async void itemsGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
         if (e.RowIndex > -1 && e.ColumnIndex == 5) {
