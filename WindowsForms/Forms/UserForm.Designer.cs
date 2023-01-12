@@ -28,9 +28,9 @@ partial class UserForm {
     /// </summary>
     private void InitializeComponent() {
         this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-        this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        this.menuMenu = new System.Windows.Forms.ToolStripMenuItem();
         this.exit = new System.Windows.Forms.ToolStripMenuItem();
-        this.добавлениеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+        this.addMenu = new System.Windows.Forms.ToolStripMenuItem();
         this.bookCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
         this.categoryCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
         this.customerCreateMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -146,40 +146,40 @@ partial class UserForm {
         // 
         this.menuStrip1.BackColor = System.Drawing.Color.White;
         this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-        this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.менюToolStripMenuItem, this.добавлениеToolStripMenuItem1 });
+        this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.menuMenu, this.addMenu });
         this.menuStrip1.Location = new System.Drawing.Point(0, 0);
         this.menuStrip1.Name = "menuStrip1";
         this.menuStrip1.Size = new System.Drawing.Size(800, 24);
         this.menuStrip1.TabIndex = 4;
         this.menuStrip1.Text = "menuStrip1";
         // 
-        // менюToolStripMenuItem
+        // menuMenu
         // 
-        this.менюToolStripMenuItem.BackColor = System.Drawing.Color.White;
-        this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.exit });
-        this.менюToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-        this.менюToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-        this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
-        this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-        this.менюToolStripMenuItem.Text = "Menu";
+        this.menuMenu.BackColor = System.Drawing.Color.White;
+        this.menuMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.exit });
+        this.menuMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+        this.menuMenu.ForeColor = System.Drawing.Color.Black;
+        this.menuMenu.Name = "menuMenu";
+        this.menuMenu.Size = new System.Drawing.Size(53, 20);
+        this.menuMenu.Text = "Menu";
         // 
         // exit
         // 
         this.exit.BackColor = System.Drawing.Color.White;
         this.exit.ForeColor = System.Drawing.Color.Black;
         this.exit.Name = "exit";
-        this.exit.Size = new System.Drawing.Size(152, 22);
+        this.exit.Size = new System.Drawing.Size(97, 22);
         this.exit.Text = "Exit";
         this.exit.Click += new System.EventHandler(this.exit_Click);
         // 
-        // добавлениеToolStripMenuItem1
+        // addMenu
         // 
-        this.добавлениеToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.bookCreateMenu, this.categoryCreateMenu, this.customerCreateMenu, this.deliveryCreateMenu, this.priceCreateMenu, this.publisherCreateMenu, this.purchaseCreateMenu, this.itemCreateMenu, this.storeCreateMenu, this.userCreateMenu });
-        this.добавлениеToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-        this.добавлениеToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
-        this.добавлениеToolStripMenuItem1.Name = "добавлениеToolStripMenuItem1";
-        this.добавлениеToolStripMenuItem1.Size = new System.Drawing.Size(45, 20);
-        this.добавлениеToolStripMenuItem1.Text = "Add";
+        this.addMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.bookCreateMenu, this.categoryCreateMenu, this.customerCreateMenu, this.deliveryCreateMenu, this.priceCreateMenu, this.publisherCreateMenu, this.purchaseCreateMenu, this.itemCreateMenu, this.storeCreateMenu, this.userCreateMenu });
+        this.addMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+        this.addMenu.ForeColor = System.Drawing.Color.Black;
+        this.addMenu.Name = "addMenu";
+        this.addMenu.Size = new System.Drawing.Size(45, 20);
+        this.addMenu.Text = "Add";
         // 
         // bookCreateMenu
         // 
@@ -916,9 +916,9 @@ partial class UserForm {
     private System.Windows.Forms.TabPage categoryTab;
 
     private System.Windows.Forms.MenuStrip menuStrip1;
-    private System.Windows.Forms.ToolStripMenuItem менюToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem menuMenu;
     private System.Windows.Forms.ToolStripMenuItem exit;
-    private System.Windows.Forms.ToolStripMenuItem добавлениеToolStripMenuItem1;
+    private System.Windows.Forms.ToolStripMenuItem addMenu;
     private System.Windows.Forms.ToolStripMenuItem bookCreateMenu;
     private System.Windows.Forms.ToolStripMenuItem categoryCreateMenu;
     private System.Windows.Forms.ToolStripMenuItem customerCreateMenu;

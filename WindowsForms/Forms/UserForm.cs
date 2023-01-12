@@ -113,6 +113,38 @@ public partial class UserForm : Form {
                 row.Cells.AddRange(idt, lt, pt, fnt, lnt, cellCombo);
                 usersGrid.Rows.Add(row);
             });
+            
+            if (access.role == "user") {
+                addMenu.Visible = false;
+                tabs.TabPages.Remove(userTab);
+                
+                storeGrid.Columns.RemoveAt(3);
+                storeGrid.Columns.RemoveAt(3);
+                
+                itemsGrid.Columns.RemoveAt(5);
+                itemsGrid.Columns.RemoveAt(5);
+                
+                purchasesGrid.Columns.RemoveAt(3);
+                purchasesGrid.Columns.RemoveAt(3);
+
+                publishersGrid.Columns.RemoveAt(2);
+                publishersGrid.Columns.RemoveAt(2);
+
+                pricesGrid.Columns.RemoveAt(3);
+                pricesGrid.Columns.RemoveAt(3);
+                
+                deliveriesGrid.Columns.RemoveAt(5);
+                deliveriesGrid.Columns.RemoveAt(5);
+
+                customersGrid.Columns.RemoveAt(3);
+                customersGrid.Columns.RemoveAt(3);
+
+                categoriesGrid.Columns.RemoveAt(2);
+                categoriesGrid.Columns.RemoveAt(2);
+
+                booksGrid.Columns.RemoveAt(4);
+                booksGrid.Columns.RemoveAt(4);
+            }
         }
         catch (NothingFoundException exception) {
             Console.WriteLine(exception);
