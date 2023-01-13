@@ -43,6 +43,7 @@ partial class PurchaseCreate {
         // 
         // clientsCombo
         // 
+        this.clientsCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.clientsCombo.FormattingEnabled = true;
         this.clientsCombo.Location = new System.Drawing.Point(162, 37);
         this.clientsCombo.Name = "clientsCombo";
@@ -89,6 +90,7 @@ partial class PurchaseCreate {
         this.Controls.Add(this.label2);
         this.Controls.Add(this.label1);
         this.Name = "PurchaseCreate";
+        this.Load += load;
         this.Text = "PurchaseCreate";
         this.ResumeLayout(false);
     }

@@ -126,6 +126,7 @@ partial class UserCreate {
         // 
         // role
         // 
+        this.role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.role.FormattingEnabled = true;
         this.role.Items.AddRange(new object[] { "admin", "user" });
         this.role.Location = new System.Drawing.Point(165, 191);

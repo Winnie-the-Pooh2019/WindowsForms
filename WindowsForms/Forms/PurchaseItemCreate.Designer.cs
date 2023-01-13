@@ -50,6 +50,7 @@ partial class PurchaseItemCreate {
         // 
         // priceCombo
         // 
+        this.priceCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.priceCombo.FormattingEnabled = true;
         this.priceCombo.Location = new System.Drawing.Point(170, 163);
         this.priceCombo.Name = "priceCombo";
@@ -58,6 +59,7 @@ partial class PurchaseItemCreate {
         // 
         // bookCombo
         // 
+        this.bookCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.bookCombo.FormattingEnabled = true;
         this.bookCombo.Location = new System.Drawing.Point(170, 104);
         this.bookCombo.Name = "bookCombo";
@@ -93,6 +95,7 @@ partial class PurchaseItemCreate {
         // 
         // purchaseCombo
         // 
+        this.purchaseCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.purchaseCombo.FormattingEnabled = true;
         this.purchaseCombo.Location = new System.Drawing.Point(170, 45);
         this.purchaseCombo.Name = "purchaseCombo";
@@ -131,6 +134,7 @@ partial class PurchaseItemCreate {
         this.Controls.Add(this.label1);
         this.Name = "PurchaseItemCreate";
         this.Text = "PurchaseItemCreate";
+        this.Load += load;
         this.ResumeLayout(false);
         this.PerformLayout();
     }

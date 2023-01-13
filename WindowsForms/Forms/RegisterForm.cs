@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using WindowsForms.Data.Models;
 using WindowsForms.Data.Service;
+using WindowsForms.Data.Service.Exceptions;
 using WindowsForms.Data.Service.Inheritance;
 
 namespace WindowsForms.Forms; 
@@ -43,9 +44,18 @@ public partial class RegisterForm : Form {
             }
 
         }
-        catch (Exception exception)
-        {
+        catch (NothingFoundException exception) {
+            Console.WriteLine(exception);
             MessageBox.Show(exception.Message);
+        }
+        catch (ServerErrorException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (Exception exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+            Hide();
         }
     }
 

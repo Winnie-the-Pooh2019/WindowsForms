@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using WindowsForms.Data.Models;
+using WindowsForms.Data.Service.Exceptions;
 using WindowsForms.Data.Service.Inheritance;
 
 namespace WindowsForms.Forms;
@@ -11,7 +12,10 @@ public partial class StoreCreate : Form {
     private readonly PriceChangeService priceChangeService;
     private readonly StoreService storeService;
 
-    public StoreCreate(Access access) {
+    private readonly UserForm userForm;
+
+    public StoreCreate(Access access, UserForm userForm) {
+        this.userForm = userForm;
         bookService = new BookService("books", access.accessToken);
         priceChangeService = new PriceChangeService("price", access.accessToken);
         storeService = new StoreService("store", access.accessToken);
@@ -27,9 +31,36 @@ public partial class StoreCreate : Form {
             bookCombo.Items.AddRange(books);
             priceCombo.Items.AddRange(prices);
         }
+        catch (NothingFoundException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (ServerErrorException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (TokenExpiredException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+            userForm.Close();
+        }
+        catch (UnauthorizedException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+            
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+            userForm.Close();
+        }
         catch (Exception e) {
             Console.WriteLine(e.StackTrace);
-            MessageBox.Show("Exception occured while loading purchases or categories");
+            MessageBox.Show(e.Message);
+            Hide();
         }
     }
 
@@ -48,6 +79,32 @@ public partial class StoreCreate : Form {
 
             await storeService.create(purchaseItem);
             Hide();
+        }
+        catch (NothingFoundException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (ServerErrorException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (TokenExpiredException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+            userForm.Close();
+        }
+        catch (UnauthorizedException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+            
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+            userForm.Close();
         }
         catch (Exception e) {
             Console.WriteLine(e.StackTrace);

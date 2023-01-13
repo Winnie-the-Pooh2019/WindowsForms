@@ -113,17 +113,17 @@ public partial class UserForm : Form {
                 row.Cells.AddRange(idt, lt, pt, fnt, lnt, cellCombo);
                 usersGrid.Rows.Add(row);
             });
-            
+
             if (access.role == "user") {
                 addMenu.Visible = false;
                 tabs.TabPages.Remove(userTab);
-                
+
                 storeGrid.Columns.RemoveAt(3);
                 storeGrid.Columns.RemoveAt(3);
-                
+
                 itemsGrid.Columns.RemoveAt(5);
                 itemsGrid.Columns.RemoveAt(5);
-                
+
                 purchasesGrid.Columns.RemoveAt(3);
                 purchasesGrid.Columns.RemoveAt(3);
 
@@ -132,7 +132,7 @@ public partial class UserForm : Form {
 
                 pricesGrid.Columns.RemoveAt(3);
                 pricesGrid.Columns.RemoveAt(3);
-                
+
                 deliveriesGrid.Columns.RemoveAt(5);
                 deliveriesGrid.Columns.RemoveAt(5);
 
@@ -150,6 +150,26 @@ public partial class UserForm : Form {
             Console.WriteLine(exception);
             MessageBox.Show(exception.Message);
         }
+        catch (ServerErrorException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (TokenExpiredException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+        }
+        catch (UnauthorizedException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+            
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+        }
         catch (Exception exception) {
             Console.WriteLine(exception.StackTrace);
             MessageBox.Show(exception.StackTrace);
@@ -161,36 +181,42 @@ public partial class UserForm : Form {
     }
 
     private async void booksGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-        if (e.RowIndex > -1 && e.ColumnIndex == 4) {
-            var book = new Book() {
-                id = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[0].Value),
-                categoryId = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[3].Value),
-                name = booksGrid.Rows[e.RowIndex].Cells[1].Value.ToString(),
-                publisherId = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[2].Value),
-            };
+        try {
+            if (e.RowIndex > -1 && e.ColumnIndex == 4) {
+                var book = new Book() {
+                    id = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[0].Value),
+                    categoryId = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[3].Value),
+                    name = booksGrid.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                    publisherId = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[2].Value),
+                };
 
-            var result = MessageBox.Show($"Вы действительно хотите книгу: {book.name}?",
-                "",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes) {
-                await bookService.deleteById(book.id);
-                load();
+                var result = MessageBox.Show($"Вы действительно хотите книгу: {book.name}?",
+                    "",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes) {
+                    await bookService.deleteById(book.id);
+                    load();
+                }
+            }
+
+            if (e.RowIndex > -1 && e.ColumnIndex == 5) {
+                var book = new Book() {
+                    id = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[0].Value),
+                    categoryId = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[3].Value),
+                    name = booksGrid.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                    publisherId = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[2].Value),
+                };
+
+                var result = MessageBox.Show($"Вы уверены, что хотите перезаписать книгу: {book.name}?",
+                    "",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                    await bookService.update(book);
             }
         }
-
-        if (e.RowIndex > -1 && e.ColumnIndex == 5) {
-            var book = new Book() {
-                id = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[0].Value),
-                categoryId = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[3].Value),
-                name = booksGrid.Rows[e.RowIndex].Cells[1].Value.ToString(),
-                publisherId = Convert.ToInt32(booksGrid.Rows[e.RowIndex].Cells[2].Value),
-            };
-
-            var result = MessageBox.Show($"Вы уверены, что хотите перезаписать книгу: {book.name}?",
-                "",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-                await bookService.update(book);
+        catch (Exception exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
         }
     }
 
@@ -533,61 +559,61 @@ public partial class UserForm : Form {
     }
 
     private void bookCreateMenu_Click(object sender, EventArgs e) {
-        var createBook = new BookCreate(access);
+        var createBook = new BookCreate(access, this);
         createBook.ShowDialog();
         load();
     }
 
     private void categoryCreateMenu_Click(object sender, EventArgs e) {
-        var createBook = new CategoryCreate(access);
+        var createBook = new CategoryCreate(access, this);
         createBook.ShowDialog();
         load();
     }
 
     private void publisherCreateMenu_Click(object sender, EventArgs e) {
-        var createBook = new PublisherCreate(access);
+        var createBook = new PublisherCreate(access, this);
         createBook.ShowDialog();
         load();
     }
 
     private void customerToolStripMenuItem_Click(object sender, EventArgs e) {
-        var createBook = new CutomerCreate(access);
+        var createBook = new CutomerCreate(access, this);
         createBook.ShowDialog();
         load();
     }
 
     private void deliveryCreateMenu_Click(object sender, EventArgs e) {
-        var createBook = new DeliveryCreate(access);
+        var createBook = new DeliveryCreate(access, this);
         createBook.ShowDialog();
         load();
     }
 
     private void priceCreateMenu_Click(object sender, EventArgs e) {
-        var createBook = new PriceCreate(access);
+        var createBook = new PriceCreate(access, this);
         createBook.ShowDialog();
         load();
     }
 
     private void purchaseCreateMenu_Click(object sender, EventArgs e) {
-        var createBook = new PurchaseCreate(access);
+        var createBook = new PurchaseCreate(access, this);
         createBook.ShowDialog();
         load();
     }
 
     private void itemCreateMenu_Click(object sender, EventArgs e) {
-        var createBook = new PurchaseItemCreate(access);
+        var createBook = new PurchaseItemCreate(access, this);
         createBook.ShowDialog();
         load();
     }
 
     private void storeCreateMenu_Click(object sender, EventArgs e) {
-        var createBook = new StoreCreate(access);
+        var createBook = new StoreCreate(access, this);
         createBook.ShowDialog();
         load();
     }
 
     private void userCreateMenu_Click(object sender, EventArgs e) {
-        var createBook = new UserCreate(access);
+        var createBook = new UserCreate(access, this);
         createBook.ShowDialog();
         load();
     }

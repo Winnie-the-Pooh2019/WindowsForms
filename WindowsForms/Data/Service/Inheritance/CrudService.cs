@@ -29,7 +29,8 @@ public class CrudService<T> {
 
         if (!response.IsSuccessStatusCode)
             throw response.StatusCode switch {
-                HttpStatusCode.NotFound => new NothingFoundException("No content found"),
+                HttpStatusCode.NotFound => new NothingFoundException(await response.Content.ReadAsStringAsync()),
+                HttpStatusCode.InternalServerError => new ServerErrorException(await response.Content.ReadAsStringAsync()),
                 HttpStatusCode.Unauthorized => new TokenExpiredException("Token for such user is expired"),
                 HttpStatusCode.Forbidden => new UnauthorizedException(
                     "You are not authorized or dont have rights to commit request"),
@@ -50,7 +51,8 @@ public class CrudService<T> {
         
         if (!response.IsSuccessStatusCode)
             throw response.StatusCode switch {
-                HttpStatusCode.NotFound => new NothingFoundException("No content found"),
+                HttpStatusCode.NotFound => new NothingFoundException(await response.Content.ReadAsStringAsync()),
+                HttpStatusCode.InternalServerError => new ServerErrorException(await response.Content.ReadAsStringAsync()),
                 HttpStatusCode.Unauthorized => new TokenExpiredException("Token for such user is expired"),
                 HttpStatusCode.Forbidden => new UnauthorizedException(
                     "You are not authorized or dont have rights to commit request"),
@@ -71,9 +73,9 @@ public class CrudService<T> {
         
         if (!response.IsSuccessStatusCode)
             throw response.StatusCode switch {
-                HttpStatusCode.NotFound => new NothingFoundException("No content found"),
+                HttpStatusCode.NotFound => new NothingFoundException(await response.Content.ReadAsStringAsync()),
                 HttpStatusCode.Unauthorized => new TokenExpiredException("Token for such user is expired"),
-                HttpStatusCode.InternalServerError => new ServerErrorException("Internal server error"),
+                HttpStatusCode.InternalServerError => new ServerErrorException(await response.Content.ReadAsStringAsync()),
                 HttpStatusCode.Forbidden => new UnauthorizedException(
                     "You are not authorized or dont have rights to commit request"),
                 _ => new Exception("unexpected exception")
@@ -94,7 +96,7 @@ public class CrudService<T> {
         if (!response.IsSuccessStatusCode)
             throw response.StatusCode switch {
                 HttpStatusCode.Unauthorized => new TokenExpiredException("Token for such user is expired"),
-                HttpStatusCode.InternalServerError => new ServerErrorException("Internal server error"),
+                HttpStatusCode.InternalServerError => new ServerErrorException(await response.Content.ReadAsStringAsync()),
                 HttpStatusCode.Forbidden => new UnauthorizedException(
                     "You are not authorized or dont have rights to commit request"),
                 _ => new Exception("unexpected exception")
@@ -119,7 +121,7 @@ public class CrudService<T> {
         if (!response.IsSuccessStatusCode)
             throw response.StatusCode switch {
                 HttpStatusCode.Unauthorized => new TokenExpiredException("Token for such user is expired"),
-                HttpStatusCode.InternalServerError => new ServerErrorException("Internal server error"),
+                HttpStatusCode.InternalServerError => new ServerErrorException( await response.Content.ReadAsStringAsync()),
                 HttpStatusCode.Forbidden => new UnauthorizedException(
                     "You are not authorized or dont have rights to commit request"),
                 _ => new Exception("unexpected exception")
@@ -144,7 +146,7 @@ public class CrudService<T> {
         if (!response.IsSuccessStatusCode)
             throw response.StatusCode switch {
                 HttpStatusCode.Unauthorized => new TokenExpiredException("Token for such user is expired"),
-                HttpStatusCode.InternalServerError => new ServerErrorException("Internal server error"),
+                HttpStatusCode.InternalServerError => new ServerErrorException(await response.Content.ReadAsStringAsync()),
                 HttpStatusCode.Forbidden => new UnauthorizedException(
                     "You are not authorized or dont have rights to commit request"),
                 _ => new Exception("unexpected exception")

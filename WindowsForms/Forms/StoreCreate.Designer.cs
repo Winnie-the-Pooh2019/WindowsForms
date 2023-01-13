@@ -64,6 +64,7 @@ partial class StoreCreate {
         // 
         // priceCombo
         // 
+        this.priceCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.priceCombo.FormattingEnabled = true;
         this.priceCombo.Location = new System.Drawing.Point(150, 95);
         this.priceCombo.Name = "priceCombo";
@@ -72,6 +73,7 @@ partial class StoreCreate {
         // 
         // bookCombo
         // 
+        this.bookCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.bookCombo.FormattingEnabled = true;
         this.bookCombo.Location = new System.Drawing.Point(150, 36);
         this.bookCombo.Name = "bookCombo";

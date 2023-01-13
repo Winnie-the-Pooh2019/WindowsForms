@@ -77,6 +77,7 @@ partial class DeliveryCreate {
         // 
         // bookCombo
         // 
+        this.bookCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.bookCombo.FormattingEnabled = true;
         this.bookCombo.Location = new System.Drawing.Point(178, 47);
         this.bookCombo.Name = "bookCombo";

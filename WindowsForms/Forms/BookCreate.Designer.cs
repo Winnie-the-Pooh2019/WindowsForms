@@ -72,6 +72,7 @@ partial class BookCreate {
         // 
         // publisher
         // 
+        this.publisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.publisher.FormattingEnabled = true;
         this.publisher.Location = new System.Drawing.Point(186, 121);
         this.publisher.Name = "publisher";
@@ -80,6 +81,7 @@ partial class BookCreate {
         // 
         // category
         // 
+        this.category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.category.FormattingEnabled = true;
         this.category.Location = new System.Drawing.Point(186, 180);
         this.category.Name = "category";
@@ -110,6 +112,7 @@ partial class BookCreate {
         this.Controls.Add(this.label1);
         this.Name = "BookCreate";
         this.Text = "BookCreate";
+        this.Load += load;
         this.ResumeLayout(false);
         this.PerformLayout();
     }

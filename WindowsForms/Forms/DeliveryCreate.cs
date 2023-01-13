@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using WindowsForms.Data.Models;
+using WindowsForms.Data.Service.Exceptions;
 using WindowsForms.Data.Service.Inheritance;
 
 namespace WindowsForms.Forms;
@@ -10,7 +11,10 @@ public partial class DeliveryCreate : Form {
     private readonly DeliveryService deliveryService;
     private readonly BookService bookService;
 
-    public DeliveryCreate(Access access) {
+    private readonly UserForm userForm;
+
+    public DeliveryCreate(Access access, UserForm userForm) {
+        this.userForm = userForm;
         deliveryService = new DeliveryService("delivery", access.accessToken);
         bookService = new BookService("books", access.accessToken);
 
@@ -23,9 +27,36 @@ public partial class DeliveryCreate : Form {
 
             bookCombo.Items.AddRange(books);
         }
+        catch (NothingFoundException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (ServerErrorException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (TokenExpiredException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+            userForm.Close();
+        }
+        catch (UnauthorizedException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+            
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+            userForm.Close();
+        }
         catch (Exception e) {
             Console.WriteLine(e.StackTrace);
-            MessageBox.Show("Exception occured while loading purchases or categories");
+            MessageBox.Show(e.Message);
+            Hide();
         }
     }
 
@@ -45,6 +76,32 @@ public partial class DeliveryCreate : Form {
 
             await deliveryService.create(delivery);
             Hide();
+        }
+        catch (NothingFoundException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (ServerErrorException exception) {
+            Console.WriteLine(exception);
+            MessageBox.Show(exception.Message);
+        }
+        catch (TokenExpiredException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+            userForm.Close();
+        }
+        catch (UnauthorizedException exception) {
+            Console.WriteLine(exception.StackTrace);
+            MessageBox.Show(exception.Message);
+            
+            var authForm = new AuthForm();
+            authForm.Show();
+            Close();
+            userForm.Close();
         }
         catch (Exception e) {
             Console.WriteLine(e.StackTrace);

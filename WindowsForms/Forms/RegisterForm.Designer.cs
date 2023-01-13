@@ -239,7 +239,7 @@ namespace WindowsForms.Forms;
                 this.btnLogin.TabIndex = 18;
                 this.btnLogin.Text = "Sign in";
                 this.btnLogin.UseVisualStyleBackColor = false;
-                this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+                this.btnLogin.Click += new System.EventHandler(this.button1_Click);
                 // 
                 // button1
                 // 
@@ -252,7 +252,7 @@ namespace WindowsForms.Forms;
                 this.button1.TabIndex = 19;
                 this.button1.Text = "Sign up";
                 this.button1.UseVisualStyleBackColor = false;
-                this.button1.Click += new System.EventHandler(this.button1_Click);
+                this.button1.Click += new System.EventHandler(this.btnLogin_Click);
                 // 
                 // RegisterForm
                 // 
